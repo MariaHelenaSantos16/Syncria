@@ -30,6 +30,7 @@ public class RegistrosImprestimos extends javax.swing.JFrame {
         jPainelRegistrosImprestimos = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,6 +54,10 @@ public class RegistrosImprestimos extends javax.swing.JFrame {
             .addGap(0, 95, Short.MAX_VALUE)
         );
 
+        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matutino", "Vespertino", "Noturno", " " }));
+
         javax.swing.GroupLayout jPainelRegistrosImprestimosLayout = new javax.swing.GroupLayout(jPainelRegistrosImprestimos);
         jPainelRegistrosImprestimos.setLayout(jPainelRegistrosImprestimosLayout);
         jPainelRegistrosImprestimosLayout.setHorizontalGroup(
@@ -60,7 +65,9 @@ public class RegistrosImprestimos extends javax.swing.JFrame {
             .addGroup(jPainelRegistrosImprestimosLayout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addComponent(jLabel1)
-                .addContainerGap(730, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(646, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPainelRegistrosImprestimosLayout.setVerticalGroup(
@@ -69,7 +76,9 @@ public class RegistrosImprestimos extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(66, 66, 66)
-                .addComponent(jLabel1)
+                .addGroup(jPainelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(329, Short.MAX_VALUE))
         );
 
@@ -129,6 +138,7 @@ public class RegistrosImprestimos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPainelRegistrosImprestimos;
     private javax.swing.JPanel jPanel1;

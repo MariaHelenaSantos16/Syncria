@@ -29,12 +29,14 @@ public class TelaCadastro extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         tela1Cadastro = new javax.swing.JPanel();
         tela2cadastro = new javax.swing.JPanel();
-        escrevaGmailCastro = new javax.swing.JTextField();
+        usuariocadastro = new javax.swing.JTextField();
         senhaCadastro = new javax.swing.JLabel();
         senhaCasatro1 = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
-        butaoSenha = new javax.swing.JButton();
-        senhaCadastro1 = new javax.swing.JLabel();
+        butaoCadastrar = new javax.swing.JButton();
+        usuarioCadastro = new javax.swing.JLabel();
+        senhaCadastroConfirma = new javax.swing.JLabel();
+        senhaCasatro2 = new javax.swing.JPasswordField();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -53,11 +55,11 @@ public class TelaCadastro extends javax.swing.JFrame {
 
         tela2cadastro.setBackground(new java.awt.Color(255, 255, 255));
 
-        escrevaGmailCastro.setBackground(new java.awt.Color(255, 255, 255));
-        escrevaGmailCastro.setForeground(new java.awt.Color(0, 0, 0));
-        escrevaGmailCastro.addActionListener(new java.awt.event.ActionListener() {
+        usuariocadastro.setBackground(new java.awt.Color(255, 255, 255));
+        usuariocadastro.setForeground(new java.awt.Color(0, 0, 0));
+        usuariocadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                escrevaGmailCastroActionPerformed(evt);
+                usuariocadastroActionPerformed(evt);
             }
         });
 
@@ -68,50 +70,70 @@ public class TelaCadastro extends javax.swing.JFrame {
 
         senhaCasatro1.setBackground(new java.awt.Color(255, 255, 255));
         senhaCasatro1.setForeground(new java.awt.Color(0, 0, 0));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\Syncria_-_Technology (2).png")); // NOI18N
-
-        butaoSenha.setBackground(new java.awt.Color(0, 51, 153));
-        butaoSenha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        butaoSenha.setForeground(new java.awt.Color(255, 255, 255));
-        butaoSenha.setText("Cadastar");
-        butaoSenha.addActionListener(new java.awt.event.ActionListener() {
+        senhaCasatro1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butaoSenhaActionPerformed(evt);
+                senhaCasatro1ActionPerformed(evt);
             }
         });
 
-        senhaCadastro1.setBackground(new java.awt.Color(0, 0, 0));
-        senhaCadastro1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        senhaCadastro1.setForeground(new java.awt.Color(0, 0, 0));
-        senhaCadastro1.setText("E-mail:");
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\Syncria_-_Technology (2).png")); // NOI18N
+
+        butaoCadastrar.setBackground(new java.awt.Color(0, 51, 153));
+        butaoCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        butaoCadastrar.setForeground(new java.awt.Color(255, 255, 255));
+        butaoCadastrar.setText("Cadastar");
+        butaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butaoCadastrarActionPerformed(evt);
+            }
+        });
+
+        usuarioCadastro.setBackground(new java.awt.Color(0, 0, 0));
+        usuarioCadastro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        usuarioCadastro.setForeground(new java.awt.Color(0, 0, 0));
+        usuarioCadastro.setText("Usuário:");
+
+        senhaCadastroConfirma.setBackground(new java.awt.Color(0, 0, 0));
+        senhaCadastroConfirma.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        senhaCadastroConfirma.setForeground(new java.awt.Color(0, 0, 0));
+        senhaCadastroConfirma.setText("confirmar:");
+
+        senhaCasatro2.setBackground(new java.awt.Color(255, 255, 255));
+        senhaCasatro2.setForeground(new java.awt.Color(0, 0, 0));
+        senhaCasatro2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                senhaCasatro2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout tela2cadastroLayout = new javax.swing.GroupLayout(tela2cadastro);
         tela2cadastro.setLayout(tela2cadastroLayout);
         tela2cadastroLayout.setHorizontalGroup(
             tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tela2cadastroLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela2cadastroLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(213, 213, 213))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela2cadastroLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
                 .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(tela2cadastroLayout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(senhaCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(senhaCasatro1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(senhaCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(usuarioCadastro))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(usuariocadastro, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+                            .addComponent(senhaCasatro1)))
                     .addGroup(tela2cadastroLayout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addComponent(butaoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(senhaCadastroConfirma)
+                        .addGap(18, 18, 18)
+                        .addComponent(senhaCasatro2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(133, 133, 133))
             .addGroup(tela2cadastroLayout.createSequentialGroup()
-                .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tela2cadastroLayout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(senhaCadastro1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(escrevaGmailCastro, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(tela2cadastroLayout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(jLabel1)))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addGap(194, 194, 194)
+                .addComponent(butaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         tela2cadastroLayout.setVerticalGroup(
             tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,32 +142,36 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(senhaCadastro1)
-                    .addComponent(escrevaGmailCastro, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                    .addComponent(usuarioCadastro)
+                    .addComponent(usuariocadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(senhaCasatro1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(senhaCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(senhaCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(senhaCasatro1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(butaoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(145, 145, 145))
+                .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(senhaCasatro2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(senhaCadastroConfirma, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addComponent(butaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(141, 141, 141))
         );
 
         javax.swing.GroupLayout tela1CadastroLayout = new javax.swing.GroupLayout(tela1Cadastro);
         tela1Cadastro.setLayout(tela1CadastroLayout);
         tela1CadastroLayout.setHorizontalGroup(
             tela1CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tela1CadastroLayout.createSequentialGroup()
-                .addGap(139, 139, 139)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela1CadastroLayout.createSequentialGroup()
+                .addContainerGap(196, Short.MAX_VALUE)
                 .addComponent(tela2cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addGap(183, 183, 183))
         );
         tela1CadastroLayout.setVerticalGroup(
             tela1CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tela1CadastroLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(tela2cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addGap(89, 89, 89)
+                .addComponent(tela2cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -162,13 +188,21 @@ public class TelaCadastro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void escrevaGmailCastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escrevaGmailCastroActionPerformed
+    private void usuariocadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariocadastroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_escrevaGmailCastroActionPerformed
+    }//GEN-LAST:event_usuariocadastroActionPerformed
 
-    private void butaoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butaoSenhaActionPerformed
+    private void butaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butaoCadastrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_butaoSenhaActionPerformed
+    }//GEN-LAST:event_butaoCadastrarActionPerformed
+
+    private void senhaCasatro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaCasatro1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senhaCasatro1ActionPerformed
+
+    private void senhaCasatro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaCasatro2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senhaCasatro2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,14 +240,16 @@ public class TelaCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton butaoSenha;
-    private javax.swing.JTextField escrevaGmailCastro;
+    private javax.swing.JButton butaoCadastrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel senhaCadastro;
-    private javax.swing.JLabel senhaCadastro1;
+    private javax.swing.JLabel senhaCadastroConfirma;
     private javax.swing.JPasswordField senhaCasatro1;
+    private javax.swing.JPasswordField senhaCasatro2;
     private javax.swing.JPanel tela1Cadastro;
     private javax.swing.JPanel tela2cadastro;
+    private javax.swing.JLabel usuarioCadastro;
+    private javax.swing.JTextField usuariocadastro;
     // End of variables declaration//GEN-END:variables
 }

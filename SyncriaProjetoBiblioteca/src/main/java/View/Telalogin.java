@@ -29,12 +29,14 @@ public class Telalogin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         tela1 = new javax.swing.JPanel();
         painelLogin = new javax.swing.JPanel();
-        labelSenha = new javax.swing.JLabel();
+        loginSenha = new javax.swing.JLabel();
         escrevaGmail = new javax.swing.JTextField();
-        butaoSenha = new javax.swing.JButton();
+        butaoEntrar = new javax.swing.JButton();
         senhaLogin = new javax.swing.JPasswordField();
         imagemEmpresa = new javax.swing.JLabel();
-        labelEgmail1 = new javax.swing.JLabel();
+        usuarioLogin = new javax.swing.JLabel();
+        botaoSenhaEsquecida = new javax.swing.JLabel();
+        botaoCadastrar = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
 
@@ -49,11 +51,11 @@ public class Telalogin extends javax.swing.JFrame {
         painelLogin.setForeground(new java.awt.Color(0, 0, 0));
         painelLogin.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        labelSenha.setBackground(new java.awt.Color(0, 0, 0));
-        labelSenha.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelSenha.setForeground(new java.awt.Color(0, 0, 0));
-        labelSenha.setText("Senha:");
-        painelLogin.add(labelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 60, 20));
+        loginSenha.setBackground(new java.awt.Color(0, 0, 0));
+        loginSenha.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        loginSenha.setForeground(new java.awt.Color(0, 0, 0));
+        loginSenha.setText("Senha:");
+        painelLogin.add(loginSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 60, 20));
 
         escrevaGmail.setBackground(new java.awt.Color(255, 255, 255));
         escrevaGmail.setForeground(new java.awt.Color(0, 0, 0));
@@ -62,48 +64,58 @@ public class Telalogin extends javax.swing.JFrame {
                 escrevaGmailActionPerformed(evt);
             }
         });
-        painelLogin.add(escrevaGmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 220, 20));
+        painelLogin.add(escrevaGmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 220, 20));
 
-        butaoSenha.setBackground(new java.awt.Color(0, 51, 153));
-        butaoSenha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        butaoSenha.setForeground(new java.awt.Color(255, 255, 255));
-        butaoSenha.setText("Entrar");
-        butaoSenha.addActionListener(new java.awt.event.ActionListener() {
+        butaoEntrar.setBackground(new java.awt.Color(51, 255, 51));
+        butaoEntrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        butaoEntrar.setForeground(new java.awt.Color(255, 255, 255));
+        butaoEntrar.setText("Entrar");
+        butaoEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butaoSenhaActionPerformed(evt);
+                butaoEntrarActionPerformed(evt);
             }
         });
-        painelLogin.add(butaoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 100, 30));
+        painelLogin.add(butaoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 100, 30));
 
         senhaLogin.setBackground(new java.awt.Color(255, 255, 255));
         senhaLogin.setForeground(new java.awt.Color(0, 0, 0));
-        painelLogin.add(senhaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 220, -1));
+        painelLogin.add(senhaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 220, -1));
 
         imagemEmpresa.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         imagemEmpresa.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\Syncria_-_Technology (2).png")); // NOI18N
-        painelLogin.add(imagemEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, 90));
+        painelLogin.add(imagemEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, 90));
 
-        labelEgmail1.setBackground(new java.awt.Color(0, 0, 0));
-        labelEgmail1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelEgmail1.setForeground(new java.awt.Color(0, 0, 0));
-        labelEgmail1.setText("Usuário:");
-        painelLogin.add(labelEgmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 70, 20));
+        usuarioLogin.setBackground(new java.awt.Color(0, 0, 0));
+        usuarioLogin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        usuarioLogin.setForeground(new java.awt.Color(0, 0, 0));
+        usuarioLogin.setText("Usuário:");
+        painelLogin.add(usuarioLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 70, 20));
+
+        botaoSenhaEsquecida.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botaoSenhaEsquecida.setForeground(new java.awt.Color(255, 0, 0));
+        botaoSenhaEsquecida.setText("esqueci a senha");
+        painelLogin.add(botaoSenhaEsquecida, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, -1, -1));
+
+        botaoCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botaoCadastrar.setForeground(new java.awt.Color(51, 255, 51));
+        botaoCadastrar.setText("cadastrar");
+        painelLogin.add(botaoCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, -1, -1));
 
         javax.swing.GroupLayout tela1Layout = new javax.swing.GroupLayout(tela1);
         tela1.setLayout(tela1Layout);
         tela1Layout.setHorizontalGroup(
             tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tela1Layout.createSequentialGroup()
-                .addGap(252, 252, 252)
+                .addGap(249, 249, 249)
                 .addComponent(painelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(254, Short.MAX_VALUE))
+                .addContainerGap(257, Short.MAX_VALUE))
         );
         tela1Layout.setVerticalGroup(
             tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tela1Layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(painelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(155, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela1Layout.createSequentialGroup()
+                .addContainerGap(117, Short.MAX_VALUE)
+                .addComponent(painelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(111, 111, 111))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -125,9 +137,9 @@ public class Telalogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_escrevaGmailActionPerformed
 
-    private void butaoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butaoSenhaActionPerformed
+    private void butaoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butaoEntrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_butaoSenhaActionPerformed
+    }//GEN-LAST:event_butaoEntrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,14 +177,16 @@ public class Telalogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton butaoSenha;
+    private javax.swing.JLabel botaoCadastrar;
+    private javax.swing.JLabel botaoSenhaEsquecida;
+    private javax.swing.JButton butaoEntrar;
     private javax.swing.JTextField escrevaGmail;
     private javax.swing.JLabel imagemEmpresa;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel labelEgmail1;
-    private javax.swing.JLabel labelSenha;
+    private javax.swing.JLabel loginSenha;
     private javax.swing.JPanel painelLogin;
     private javax.swing.JPasswordField senhaLogin;
     private javax.swing.JPanel tela1;
+    private javax.swing.JLabel usuarioLogin;
     // End of variables declaration//GEN-END:variables
 }
