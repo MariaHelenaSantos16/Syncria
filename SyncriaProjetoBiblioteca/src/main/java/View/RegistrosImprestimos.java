@@ -27,15 +27,15 @@ public class RegistrosImprestimos extends javax.swing.JFrame {
     private void initComponents() {
 
         rolagemRegistrosImprestimos = new javax.swing.JScrollPane();
-        jPainelRegistrosImprestimos = new javax.swing.JPanel();
+        registrosImprestimos = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPainelRegistrosImprestimos.setBackground(new java.awt.Color(73, 112, 138));
-        jPainelRegistrosImprestimos.setForeground(new java.awt.Color(0, 0, 0));
+        registrosImprestimos.setBackground(new java.awt.Color(73, 112, 138));
+        registrosImprestimos.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -58,11 +58,11 @@ public class RegistrosImprestimos extends javax.swing.JFrame {
         jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matutino", "Vespertino", "Noturno", " " }));
 
-        javax.swing.GroupLayout jPainelRegistrosImprestimosLayout = new javax.swing.GroupLayout(jPainelRegistrosImprestimos);
-        jPainelRegistrosImprestimos.setLayout(jPainelRegistrosImprestimosLayout);
-        jPainelRegistrosImprestimosLayout.setHorizontalGroup(
-            jPainelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPainelRegistrosImprestimosLayout.createSequentialGroup()
+        javax.swing.GroupLayout registrosImprestimosLayout = new javax.swing.GroupLayout(registrosImprestimos);
+        registrosImprestimos.setLayout(registrosImprestimosLayout);
+        registrosImprestimosLayout.setHorizontalGroup(
+            registrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(registrosImprestimosLayout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -70,19 +70,19 @@ public class RegistrosImprestimos extends javax.swing.JFrame {
                 .addContainerGap(646, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPainelRegistrosImprestimosLayout.setVerticalGroup(
-            jPainelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPainelRegistrosImprestimosLayout.createSequentialGroup()
+        registrosImprestimosLayout.setVerticalGroup(
+            registrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(registrosImprestimosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(66, 66, 66)
-                .addGroup(jPainelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(registrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(329, Short.MAX_VALUE))
         );
 
-        rolagemRegistrosImprestimos.setViewportView(jPainelRegistrosImprestimos);
+        rolagemRegistrosImprestimos.setViewportView(registrosImprestimos);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,8 +140,8 @@ public class RegistrosImprestimos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPainelRegistrosImprestimos;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel registrosImprestimos;
     private javax.swing.JScrollPane rolagemRegistrosImprestimos;
     // End of variables declaration//GEN-END:variables
 }
