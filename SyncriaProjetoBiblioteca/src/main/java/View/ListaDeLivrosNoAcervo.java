@@ -837,11 +837,11 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
                 .addGroup(princPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(escrevaLista)
                     .addComponent(comboFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(4237, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(princPanelLayout.createSequentialGroup()
                 .addGroup(princPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
-                    .addComponent(panelWhite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panelWhite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(painelSec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -858,32 +858,56 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
                         .addComponent(escrevaLista, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(comboFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(princPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(princPanelLayout.createSequentialGroup()
-                        .addGap(581, 581, 581)
+                        .addGap(0, 72, Short.MAX_VALUE)
                         .addComponent(painelSec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(princPanelLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 847, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(649, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
+                .addGap(0, 0, 0))
         );
 
         menuUm.setText("| Registro de Empréstimo |");
+        menuUm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menuUmMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(menuUm);
 
         menuDois.setText("Lista de Livros Emprestados |");
+        menuDois.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menuDoisMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(menuDois);
 
         menuTres.setText("Cadastro de Livros |");
+        menuTres.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menuTresMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(menuTres);
 
         menuQuatro.setText("Lista de Livros no Acervo |");
         jMenuBar1.add(menuQuatro);
 
         menuSeis.setText("Ranking dos Leitores |");
+        menuSeis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menuSeisMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(menuSeis);
 
         menuSete.setText("Banco de Dados das Turmas |");
+        menuSete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                menuSeteMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(menuSete);
 
         setJMenuBar(jMenuBar1);
@@ -892,17 +916,17 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(princPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(princPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1920, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(princPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -913,6 +937,64 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_comboFiltroActionPerformed
 
+    private void menuUmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuUmMouseClicked
+        // TODO add your handling code here:
+        
+         
+        //criar objeto da classe 
+        TelaRegistrosEmprestimos registroEmprestimo = new TelaRegistrosEmprestimos();
+               // abrindo a tela
+                registroEmprestimo.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_menuUmMouseClicked
+
+    private void menuDoisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuDoisMouseClicked
+        // TODO add your handling code here:
+        
+        
+        //criar objeto da classe 
+        ListaDeLivrosEmprestados listaEmprestado = new ListaDeLivrosEmprestados();
+               // abrindo a tela
+                listaEmprestado.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_menuDoisMouseClicked
+
+    private void menuTresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuTresMouseClicked
+        // TODO add your handling code here:
+        
+             //criar objeto da classe 
+        Telaldecadastrodelivros cadastroLivro = new Telaldecadastrodelivros();
+               // abrindo a tela
+                cadastroLivro.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_menuTresMouseClicked
+
+    private void menuSeisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuSeisMouseClicked
+        // TODO add your handling code here:
+        
+        
+        
+    }//GEN-LAST:event_menuSeisMouseClicked
+
+    private void menuSeteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuSeteMouseClicked
+        // TODO add your handling code here:
+        
+        //criar objeto da classe 
+        BancoDeDadosDasTurmas bancoDadosTurma = new BancoDeDadosDasTurmas();
+               // abrindo a tela
+                bancoDadosTurma.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_menuSeteMouseClicked
+
+    
     /**
      * @param args the command line arguments
      */
