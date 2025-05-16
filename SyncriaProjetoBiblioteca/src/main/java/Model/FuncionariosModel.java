@@ -21,6 +21,10 @@ public class FuncionariosModel {
         this.cadastro = cadastro;
         this.senhacadastro = senhacadastro;
     }
+
+    public FuncionariosModel() {
+    }
+    
     
     
     
@@ -58,6 +62,10 @@ public class FuncionariosModel {
 
     public void setSenhacadastro(String senhacadastro) {
         this.senhacadastro = senhacadastro;
+    }
+
+    public void setNome(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     
