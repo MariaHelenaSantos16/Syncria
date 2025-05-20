@@ -80,7 +80,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="painelRegistrosImprestimos" min="-2" max="-2" attributes="0"/>
+              <Component id="textoDataDevolucao" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -89,14 +89,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-              <Component id="painelRegistrosImprestimos" max="32767" attributes="0"/>
+              <Component id="textoDataDevolucao" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="painelRegistrosImprestimos">
+    <Container class="javax.swing.JPanel" name="textoDataDevolucao">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -120,22 +120,22 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="butaoDataRetiradaRE" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="selecionarAlunoRE" min="-2" pref="402" max="-2" attributes="0"/>
-                                      <Component id="tituloDataRetiradaRE" min="-2" max="-2" attributes="0"/>
-                                      <Component id="tituloDataDevolucaoRE1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="selecionarTituloLivro" min="-2" pref="402" max="-2" attributes="0"/>
+                                      <Component id="tituloDoLivroRE" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tituloDataDevolucaoRE" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="tituloRegistrosRE" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="textoRegistrosRE" alignment="0" min="-2" pref="402" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField3" pref="260" max="32767" attributes="0"/>
+                                      <Component id="tituloTabelaSituacaoAlunoRE" pref="260" max="32767" attributes="0"/>
                                       <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
                                       <Component id="jScrollPane4" alignment="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="selecionarBimestroRE" alignment="0" min="-2" pref="402" max="-2" attributes="0"/>
                               <Component id="tituloBimestreRE" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="textoDataDevolucaoRE1" min="-2" pref="402" max="-2" attributes="0"/>
+                              <Component id="textoDataDevolucaoRE" min="-2" pref="402" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -172,14 +172,14 @@
                           <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="tituloSituacaoDoTitulo" max="32767" attributes="0"/>
+                                  <Component id="tituloTabelaSituacaoDoTitulo" max="32767" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jScrollPane2" min="-2" pref="424" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="357" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="textoSituacaoLivrosEmprestados" alignment="0" pref="341" max="32767" attributes="0"/>
+                                      <Component id="tituloTabelaSituacaoLivrosEmprestadosRE" alignment="0" pref="341" max="32767" attributes="0"/>
                                       <Component id="jScrollPane6" alignment="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
@@ -209,7 +209,7 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="textoSituacaoLivrosEmprestados" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tituloTabelaSituacaoLivrosEmprestadosRE" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="botaoGravar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -230,7 +230,7 @@
                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="tituloSituacaoDoTitulo" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tituloTabelaSituacaoDoTitulo" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jScrollPane1" min="-2" pref="71" max="-2" attributes="0"/>
                               </Group>
@@ -250,21 +250,21 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="tituloDataRetiradaRE" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                              <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tituloDoLivroRE" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                              <Component id="tituloTabelaSituacaoAlunoRE" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="selecionarAlunoRE" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="selecionarTituloLivro" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Component id="tituloRegistrosRE" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="textoRegistrosRE" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                  <Component id="tituloDataDevolucaoRE1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tituloDataDevolucaoRE" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="textoDataDevolucaoRE1" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="textoDataDevolucaoRE" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="tituloBimestreRE" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -301,18 +301,25 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="tituloBibliotecaSyncria" min="-2" pref="508" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace pref="16" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="iconeBilblioteca" min="-2" pref="56" max="-2" attributes="0"/>
                           <Component id="tituloBibliotecaSyncria" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -334,6 +341,17 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="2" name="C:\Users\ALUNO\Downloads\livro_(1)_(2).png"/>
                 </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\ALUNO\Downloads\logout_(1).png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Sair"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -420,7 +438,7 @@
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="tituloDataRetiradaRE">
+        <Component class="javax.swing.JLabel" name="tituloDoLivroRE">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="1"/>
@@ -431,7 +449,7 @@
             <Property name="text" type="java.lang.String" value="T&#xed;tulo do Livro:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="selecionarAlunoRE">
+        <Component class="javax.swing.JComboBox" name="selecionarTituloLivro">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -507,7 +525,7 @@
             <Property name="text" type="java.lang.String" value="Hoje"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="tituloDataDevolucaoRE1">
+        <Component class="javax.swing.JLabel" name="tituloDataDevolucaoRE">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="1"/>
@@ -532,7 +550,7 @@
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="iconeRE" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="tituloRegistrosImprestimos" min="-2" max="-2" attributes="0"/>
+                      <Component id="tituloRegistrosEmprestimos" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -544,7 +562,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="iconeRE" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="tituloRegistrosImprestimos" min="-2" max="-2" attributes="0"/>
+                              <Component id="tituloRegistrosEmprestimos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -554,7 +572,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="tituloRegistrosImprestimos">
+            <Component class="javax.swing.JLabel" name="tituloRegistrosEmprestimos">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="36" style="1"/>
@@ -562,7 +580,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Registros de Imprestimos"/>
+                <Property name="text" type="java.lang.String" value="Registros de Empr&#xe9;stimos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="iconeRE">
@@ -574,14 +592,14 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="textoDataDevolucaoRE1">
+        <Component class="javax.swing.JTextField" name="textoDataDevolucaoRE">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoDataDevolucaoRE1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoDataDevolucaoREActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="selecionarBimestroRE">
@@ -613,7 +631,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="textoSituacaoLivrosEmprestados">
+        <Component class="javax.swing.JTextField" name="tituloTabelaSituacaoLivrosEmprestadosRE">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="ff" red="ff" type="rgb"/>
@@ -627,7 +645,7 @@
             <Property name="text" type="java.lang.String" value="Situa&#xe7;&#xe3;o dos Livros Emprestados"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoSituacaoLivrosEmprestadosActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tituloTabelaSituacaoLivrosEmprestadosREActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -637,13 +655,13 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tabelaSituacaoT&#xed;tulo">
+            <Component class="javax.swing.JTable" name="tabelaSituacaoT&#xed;tuloRE">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="2" rowCount="4">
+                  <Table columnCount="2" rowCount="1">
                     <Column editable="true" title="Emprestados" type="java.lang.Object"/>
                     <Column editable="true" title="No Acervo" type="java.lang.Object"/>
                   </Table>
@@ -653,7 +671,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="tituloSituacaoDoTitulo">
+        <Component class="javax.swing.JTextField" name="tituloTabelaSituacaoDoTitulo">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="66" type="rgb"/>
@@ -668,7 +686,7 @@
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tituloSituacaoDoTituloActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tituloTabelaSituacaoDoTituloActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
@@ -678,7 +696,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tabelaLocalizacaoLivroBiblioteca">
+            <Component class="javax.swing.JTable" name="tabelaLocalizacaoLivroBibliotecaRE">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -687,7 +705,7 @@
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="1" rowCount="4">
+                  <Table columnCount="1" rowCount="1">
                     <Column editable="true" title="Localiza&#xe7;&#xe3;o do LIvro na biblioteca" type="java.lang.Object"/>
                   </Table>
                 </Property>
@@ -726,7 +744,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
+        <Component class="javax.swing.JTextField" name="tituloTabelaSituacaoAlunoRE">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="ff" red="ff" type="rgb"/>
@@ -740,7 +758,7 @@
             <Property name="text" type="java.lang.String" value="Situa&#xe7;&#xe3;o do Aluno(a)"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tituloTabelaSituacaoAlunoREActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane4">
@@ -759,7 +777,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="3" rowCount="4">
+                  <Table columnCount="3" rowCount="1">
                     <Column editable="true" title="Emprestados" type="java.lang.Object"/>
                     <Column editable="true" title="Devolvidos" type="java.lang.Object"/>
                     <Column editable="true" title="Devolvendo" type="java.lang.Object"/>
@@ -776,7 +794,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tabelaSituacaoLivrosEmprestados">
+            <Component class="javax.swing.JTable" name="tabelaSituacaoLivrosEmprestadosRE">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -785,18 +803,12 @@
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="4" rowCount="4">
+                  <Table columnCount="4" rowCount="1">
                     <Column editable="true" title="Emprestados" type="java.lang.Object">
                       <Data value=""/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
                     </Column>
                     <Column editable="true" title="Devolvidos" type="java.lang.Object">
                       <Data value=""/>
-                      <Data value="null"/>
-                      <Data value=""/>
-                      <Data value="null"/>
                     </Column>
                     <Column editable="true" title="Saldo" type="java.lang.Object"/>
                     <Column editable="true" title="Total" type="java.lang.Object"/>
@@ -825,10 +837,9 @@
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="1" rowCount="4">
+                  <Table columnCount="1" rowCount="3">
                     <Column editable="true" title="Troca Data" type="java.lang.Object">
                       <Data value=""/>
-                      <Data value="null"/>
                       <Data value="null"/>
                       <Data value="null"/>
                     </Column>
@@ -857,10 +868,9 @@
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="1" rowCount="4">
+                  <Table columnCount="1" rowCount="3">
                     <Column editable="true" title="LIVROS ALUGADOS PELO ALUNO(A)" type="java.lang.Object">
                       <Data value=""/>
-                      <Data value="null"/>
                       <Data value="null"/>
                       <Data value="null"/>
                     </Column>
@@ -889,10 +899,9 @@
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="1" rowCount="4">
+                  <Table columnCount="1" rowCount="3">
                     <Column editable="true" title="Situa&#xe7;&#xe3;o" type="java.lang.Object">
                       <Data value=""/>
-                      <Data value="null"/>
                       <Data value="null"/>
                       <Data value="null"/>
                     </Column>

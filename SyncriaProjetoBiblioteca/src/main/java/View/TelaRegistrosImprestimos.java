@@ -27,41 +27,42 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
     private void initComponents() {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
-        painelRegistrosImprestimos = new javax.swing.JPanel();
+        textoDataDevolucao = new javax.swing.JPanel();
         paineliconeSyncriaRegistros = new javax.swing.JPanel();
         tituloBibliotecaSyncria = new javax.swing.JLabel();
         iconeBilblioteca = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         selecionarTurnoRE = new javax.swing.JComboBox<>();
         tituloTurnosRE = new javax.swing.JLabel();
         tituloCodigoDeTurmaRE = new javax.swing.JLabel();
         selecionarTurmaRE = new javax.swing.JComboBox<>();
         tituloAlunoRE = new javax.swing.JLabel();
-        tituloDataRetiradaRE = new javax.swing.JLabel();
-        selecionarAlunoRE = new javax.swing.JComboBox<>();
+        tituloDoLivroRE = new javax.swing.JLabel();
+        selecionarTituloLivro = new javax.swing.JComboBox<>();
         textoDataRetiradaRE = new javax.swing.JTextField();
         tituloBimestreRE = new javax.swing.JLabel();
         tituloRegistrosRE = new javax.swing.JLabel();
         textoRegistrosRE = new javax.swing.JTextField();
         butaoDataRetiradaRE = new javax.swing.JButton();
-        tituloDataDevolucaoRE1 = new javax.swing.JLabel();
+        tituloDataDevolucaoRE = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        tituloRegistrosImprestimos = new javax.swing.JLabel();
+        tituloRegistrosEmprestimos = new javax.swing.JLabel();
         iconeRE = new javax.swing.JLabel();
-        textoDataDevolucaoRE1 = new javax.swing.JTextField();
+        textoDataDevolucaoRE = new javax.swing.JTextField();
         selecionarBimestroRE = new javax.swing.JComboBox<>();
-        textoSituacaoLivrosEmprestados = new javax.swing.JTextField();
+        tituloTabelaSituacaoLivrosEmprestadosRE = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabelaSituacaoTítulo = new javax.swing.JTable();
-        tituloSituacaoDoTitulo = new javax.swing.JTextField();
+        tabelaSituacaoTítuloRE = new javax.swing.JTable();
+        tituloTabelaSituacaoDoTitulo = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tabelaLocalizacaoLivroBiblioteca = new javax.swing.JTable();
+        tabelaLocalizacaoLivroBibliotecaRE = new javax.swing.JTable();
         tituloDataRetiradaRE1 = new javax.swing.JLabel();
         selecionarAlunoRE1 = new javax.swing.JComboBox<>();
-        jTextField3 = new javax.swing.JTextField();
+        tituloTabelaSituacaoAlunoRE = new javax.swing.JTextField();
         jScrollPane4 = new javax.swing.JScrollPane();
         tabelaSituacaoAlunoRE = new javax.swing.JTable();
         jScrollPane6 = new javax.swing.JScrollPane();
-        tabelaSituacaoLivrosEmprestados = new javax.swing.JTable();
+        tabelaSituacaoLivrosEmprestadosRE = new javax.swing.JTable();
         jScrollPane7 = new javax.swing.JScrollPane();
         tabelaDataTrocaRE = new javax.swing.JTable();
         jScrollPane8 = new javax.swing.JScrollPane();
@@ -80,7 +81,7 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        painelRegistrosImprestimos.setBackground(new java.awt.Color(204, 204, 204));
+        textoDataDevolucao.setBackground(new java.awt.Color(204, 204, 204));
 
         paineliconeSyncriaRegistros.setBackground(new java.awt.Color(208, 224, 235));
 
@@ -89,6 +90,10 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         tituloBibliotecaSyncria.setText("Biblioteca Syncria");
 
         iconeBilblioteca.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro_(1)_(2).png")); // NOI18N
+
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\logout_(1).png")); // NOI18N
+        jLabel1.setText("Sair");
 
         javax.swing.GroupLayout paineliconeSyncriaRegistrosLayout = new javax.swing.GroupLayout(paineliconeSyncriaRegistros);
         paineliconeSyncriaRegistros.setLayout(paineliconeSyncriaRegistrosLayout);
@@ -99,16 +104,22 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 .addComponent(iconeBilblioteca)
                 .addGap(18, 18, 18)
                 .addComponent(tituloBibliotecaSyncria, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(14, 14, 14))
         );
         paineliconeSyncriaRegistrosLayout.setVerticalGroup(
             paineliconeSyncriaRegistrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paineliconeSyncriaRegistrosLayout.createSequentialGroup()
+            .addGroup(paineliconeSyncriaRegistrosLayout.createSequentialGroup()
                 .addContainerGap(16, Short.MAX_VALUE)
                 .addGroup(paineliconeSyncriaRegistrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(iconeBilblioteca, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tituloBibliotecaSyncria))
                 .addGap(12, 12, 12))
+            .addGroup(paineliconeSyncriaRegistrosLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         selecionarTurnoRE.setBackground(new java.awt.Color(255, 255, 255));
@@ -140,14 +151,14 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         tituloAlunoRE.setText("Aluno(a):");
         tituloAlunoRE.setToolTipText("");
 
-        tituloDataRetiradaRE.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        tituloDataRetiradaRE.setForeground(new java.awt.Color(0, 0, 0));
-        tituloDataRetiradaRE.setText("Título do Livro:");
+        tituloDoLivroRE.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        tituloDoLivroRE.setForeground(new java.awt.Color(0, 0, 0));
+        tituloDoLivroRE.setText("Título do Livro:");
 
-        selecionarAlunoRE.setBackground(new java.awt.Color(255, 255, 255));
-        selecionarAlunoRE.setEditable(true);
-        selecionarAlunoRE.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        selecionarAlunoRE.setForeground(new java.awt.Color(0, 0, 0));
+        selecionarTituloLivro.setBackground(new java.awt.Color(255, 255, 255));
+        selecionarTituloLivro.setEditable(true);
+        selecionarTituloLivro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        selecionarTituloLivro.setForeground(new java.awt.Color(0, 0, 0));
 
         textoDataRetiradaRE.setBackground(new java.awt.Color(255, 255, 255));
         textoDataRetiradaRE.addActionListener(new java.awt.event.ActionListener() {
@@ -176,15 +187,15 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         butaoDataRetiradaRE.setForeground(new java.awt.Color(0, 0, 0));
         butaoDataRetiradaRE.setText("Hoje");
 
-        tituloDataDevolucaoRE1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        tituloDataDevolucaoRE1.setForeground(new java.awt.Color(0, 0, 0));
-        tituloDataDevolucaoRE1.setText("Data de Devolução:");
+        tituloDataDevolucaoRE.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        tituloDataDevolucaoRE.setForeground(new java.awt.Color(0, 0, 0));
+        tituloDataDevolucaoRE.setText("Data de Devolução:");
 
         jPanel1.setBackground(new java.awt.Color(73, 112, 138));
 
-        tituloRegistrosImprestimos.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        tituloRegistrosImprestimos.setForeground(new java.awt.Color(0, 0, 0));
-        tituloRegistrosImprestimos.setText("Registros de Imprestimos");
+        tituloRegistrosEmprestimos.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        tituloRegistrosEmprestimos.setForeground(new java.awt.Color(0, 0, 0));
+        tituloRegistrosEmprestimos.setText("Registros de Empréstimos");
 
         iconeRE.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro_(1).png")); // NOI18N
 
@@ -196,7 +207,7 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(iconeRE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tituloRegistrosImprestimos)
+                .addComponent(tituloRegistrosEmprestimos)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -206,15 +217,15 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(iconeRE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(tituloRegistrosImprestimos)
+                        .addComponent(tituloRegistrosEmprestimos)
                         .addGap(8, 8, 8)))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        textoDataDevolucaoRE1.setBackground(new java.awt.Color(255, 255, 255));
-        textoDataDevolucaoRE1.addActionListener(new java.awt.event.ActionListener() {
+        textoDataDevolucaoRE.setBackground(new java.awt.Color(255, 255, 255));
+        textoDataDevolucaoRE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoDataDevolucaoRE1ActionPerformed(evt);
+                textoDataDevolucaoREActionPerformed(evt);
             }
         });
 
@@ -229,56 +240,50 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
             }
         });
 
-        textoSituacaoLivrosEmprestados.setBackground(new java.awt.Color(255, 255, 51));
-        textoSituacaoLivrosEmprestados.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        textoSituacaoLivrosEmprestados.setForeground(new java.awt.Color(0, 0, 0));
-        textoSituacaoLivrosEmprestados.setText("Situação dos Livros Emprestados");
-        textoSituacaoLivrosEmprestados.addActionListener(new java.awt.event.ActionListener() {
+        tituloTabelaSituacaoLivrosEmprestadosRE.setBackground(new java.awt.Color(255, 255, 51));
+        tituloTabelaSituacaoLivrosEmprestadosRE.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        tituloTabelaSituacaoLivrosEmprestadosRE.setForeground(new java.awt.Color(0, 0, 0));
+        tituloTabelaSituacaoLivrosEmprestadosRE.setText("Situação dos Livros Emprestados");
+        tituloTabelaSituacaoLivrosEmprestadosRE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoSituacaoLivrosEmprestadosActionPerformed(evt);
+                tituloTabelaSituacaoLivrosEmprestadosREActionPerformed(evt);
             }
         });
 
-        tabelaSituacaoTítulo.setBackground(new java.awt.Color(255, 255, 255));
-        tabelaSituacaoTítulo.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaSituacaoTítuloRE.setBackground(new java.awt.Color(255, 255, 255));
+        tabelaSituacaoTítuloRE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
                 {null, null}
             },
             new String [] {
                 "Emprestados", "No Acervo"
             }
         ));
-        tabelaSituacaoTítulo.setToolTipText("\n");
-        jScrollPane1.setViewportView(tabelaSituacaoTítulo);
+        tabelaSituacaoTítuloRE.setToolTipText("\n");
+        jScrollPane1.setViewportView(tabelaSituacaoTítuloRE);
 
-        tituloSituacaoDoTitulo.setBackground(new java.awt.Color(102, 204, 255));
-        tituloSituacaoDoTitulo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        tituloSituacaoDoTitulo.setForeground(new java.awt.Color(0, 0, 0));
-        tituloSituacaoDoTitulo.setText("Situação do Título");
-        tituloSituacaoDoTitulo.setToolTipText("");
-        tituloSituacaoDoTitulo.addActionListener(new java.awt.event.ActionListener() {
+        tituloTabelaSituacaoDoTitulo.setBackground(new java.awt.Color(102, 204, 255));
+        tituloTabelaSituacaoDoTitulo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tituloTabelaSituacaoDoTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        tituloTabelaSituacaoDoTitulo.setText("Situação do Título");
+        tituloTabelaSituacaoDoTitulo.setToolTipText("");
+        tituloTabelaSituacaoDoTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tituloSituacaoDoTituloActionPerformed(evt);
+                tituloTabelaSituacaoDoTituloActionPerformed(evt);
             }
         });
 
-        tabelaLocalizacaoLivroBiblioteca.setBackground(new java.awt.Color(255, 255, 255));
-        tabelaLocalizacaoLivroBiblioteca.setForeground(new java.awt.Color(0, 0, 0));
-        tabelaLocalizacaoLivroBiblioteca.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaLocalizacaoLivroBibliotecaRE.setBackground(new java.awt.Color(255, 255, 255));
+        tabelaLocalizacaoLivroBibliotecaRE.setForeground(new java.awt.Color(0, 0, 0));
+        tabelaLocalizacaoLivroBibliotecaRE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null},
-                {null},
-                {null},
                 {null}
             },
             new String [] {
                 "Localização do LIvro na biblioteca"
             }
         ));
-        jScrollPane2.setViewportView(tabelaLocalizacaoLivroBiblioteca);
+        jScrollPane2.setViewportView(tabelaLocalizacaoLivroBibliotecaRE);
 
         tituloDataRetiradaRE1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         tituloDataRetiradaRE1.setForeground(new java.awt.Color(0, 0, 0));
@@ -289,13 +294,13 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         selecionarAlunoRE1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         selecionarAlunoRE1.setForeground(new java.awt.Color(0, 0, 0));
 
-        jTextField3.setBackground(new java.awt.Color(255, 255, 51));
-        jTextField3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField3.setText("Situação do Aluno(a)");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        tituloTabelaSituacaoAlunoRE.setBackground(new java.awt.Color(255, 255, 51));
+        tituloTabelaSituacaoAlunoRE.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        tituloTabelaSituacaoAlunoRE.setForeground(new java.awt.Color(0, 0, 0));
+        tituloTabelaSituacaoAlunoRE.setText("Situação do Aluno(a)");
+        tituloTabelaSituacaoAlunoRE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                tituloTabelaSituacaoAlunoREActionPerformed(evt);
             }
         });
 
@@ -303,9 +308,6 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         tabelaSituacaoAlunoRE.setForeground(new java.awt.Color(255, 255, 255));
         tabelaSituacaoAlunoRE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
                 {null, null, null}
             },
             new String [] {
@@ -314,28 +316,24 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(tabelaSituacaoAlunoRE);
 
-        tabelaSituacaoLivrosEmprestados.setBackground(new java.awt.Color(255, 255, 255));
-        tabelaSituacaoLivrosEmprestados.setForeground(new java.awt.Color(0, 0, 0));
-        tabelaSituacaoLivrosEmprestados.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaSituacaoLivrosEmprestadosRE.setBackground(new java.awt.Color(255, 255, 255));
+        tabelaSituacaoLivrosEmprestadosRE.setForeground(new java.awt.Color(0, 0, 0));
+        tabelaSituacaoLivrosEmprestadosRE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"", "", null, null},
-                {null, null, null, null},
-                {null, "", null, null},
-                {null, null, null, null}
+                {"", "", null, null}
             },
             new String [] {
                 "Emprestados", "Devolvidos", "Saldo", "Total"
             }
         ));
-        tabelaSituacaoLivrosEmprestados.setSelectionBackground(new java.awt.Color(153, 255, 255));
-        jScrollPane6.setViewportView(tabelaSituacaoLivrosEmprestados);
+        tabelaSituacaoLivrosEmprestadosRE.setSelectionBackground(new java.awt.Color(153, 255, 255));
+        jScrollPane6.setViewportView(tabelaSituacaoLivrosEmprestadosRE);
 
         tabelaDataTrocaRE.setBackground(new java.awt.Color(255, 255, 255));
         tabelaDataTrocaRE.setForeground(new java.awt.Color(0, 0, 0));
         tabelaDataTrocaRE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {""},
-                {null},
                 {null},
                 {null}
             },
@@ -352,7 +350,6 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
             new Object [][] {
                 {""},
                 {null},
-                {null},
                 {null}
             },
             new String [] {
@@ -367,7 +364,6 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         tabelaSituacaoRE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {""},
-                {null},
                 {null},
                 {null}
             },
@@ -403,84 +399,84 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout painelRegistrosImprestimosLayout = new javax.swing.GroupLayout(painelRegistrosImprestimos);
-        painelRegistrosImprestimos.setLayout(painelRegistrosImprestimosLayout);
-        painelRegistrosImprestimosLayout.setHorizontalGroup(
-            painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout textoDataDevolucaoLayout = new javax.swing.GroupLayout(textoDataDevolucao);
+        textoDataDevolucao.setLayout(textoDataDevolucaoLayout);
+        textoDataDevolucaoLayout.setHorizontalGroup(
+            textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(paineliconeSyncriaRegistros, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
+            .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
                 .addGap(129, 129, 129)
-                .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
-                        .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
-                                .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
+                .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
+                        .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
+                                .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
                                         .addComponent(textoDataRetiradaRE, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(butaoDataRetiradaRE))
-                                    .addComponent(selecionarAlunoRE, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tituloDataRetiradaRE)
-                                    .addComponent(tituloDataDevolucaoRE1)
+                                    .addComponent(selecionarTituloLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tituloDoLivroRE)
+                                    .addComponent(tituloDataDevolucaoRE)
                                     .addComponent(tituloRegistrosRE)
                                     .addComponent(textoRegistrosRE, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(222, 222, 222)
-                                .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                                .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tituloTabelaSituacaoAlunoRE, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                             .addComponent(selecionarBimestroRE, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tituloBimestreRE)
-                            .addComponent(textoDataDevolucaoRE1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(textoDataDevolucaoRE, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
+                        .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
                                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(192, 192, 192))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelRegistrosImprestimosLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, textoDataDevolucaoLayout.createSequentialGroup()
                                 .addComponent(botaoDevolver)
                                 .addGap(18, 18, 18)
                                 .addComponent(botaoRenovar)
                                 .addGap(202, 202, 202))))
-                    .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
-                        .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
+                        .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tituloTurnosRE)
                             .addComponent(tituloDataRetiradaRE1)
                             .addComponent(tituloAlunoRE)
                             .addComponent(selecionarTurmaRE, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tituloCodigoDeTurmaRE)
                             .addComponent(selecionarAlunoRE1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
+                            .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
                                 .addComponent(selecionarTurnoRE, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(81, 81, 81)
                                 .addComponent(botaoGravar)))
                         .addGap(125, 125, 125)
-                        .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
-                                .addComponent(tituloSituacaoDoTitulo)
+                        .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
+                                .addComponent(tituloTabelaSituacaoDoTitulo)
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(357, 357, 357))
-                            .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
-                                .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(textoSituacaoLivrosEmprestados, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
+                            .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
+                                .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(tituloTabelaSituacaoLivrosEmprestadosRE, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
                                     .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
         );
-        painelRegistrosImprestimosLayout.setVerticalGroup(
-            painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
+        textoDataDevolucaoLayout.setVerticalGroup(
+            textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
                 .addComponent(paineliconeSyncriaRegistros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
-                .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
+                .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
                         .addComponent(tituloTurnosRE)
                         .addGap(18, 18, 18)
                         .addComponent(selecionarTurnoRE, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -488,59 +484,59 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                         .addComponent(tituloCodigoDeTurmaRE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(selecionarTurmaRE, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
-                        .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(textoSituacaoLivrosEmprestados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
+                        .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tituloTabelaSituacaoLivrosEmprestadosRE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(botaoGravar))
                         .addGap(0, 0, 0)
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)))
-                .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
+                .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(tituloAlunoRE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(selecionarAlunoRE1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(tituloDataRetiradaRE1))
-                    .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
+                    .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
-                                .addComponent(tituloSituacaoDoTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
+                                .addComponent(tituloTabelaSituacaoDoTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textoDataRetiradaRE, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(butaoDataRetiradaRE)
                     .addComponent(botaoDevolver)
                     .addComponent(botaoRenovar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
+                .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
                         .addGap(3, 3, 3)
-                        .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tituloDataRetiradaRE, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tituloDoLivroRE, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tituloTabelaSituacaoAlunoRE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
-                                .addComponent(selecionarAlunoRE, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(textoDataDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
+                                .addComponent(selecionarTituloLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(tituloRegistrosRE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(textoRegistrosRE, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(14, 14, 14)
-                                .addComponent(tituloDataDevolucaoRE1)
+                                .addComponent(tituloDataDevolucaoRE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(textoDataDevolucaoRE1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textoDataDevolucaoRE, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tituloBimestreRE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(selecionarBimestroRE, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
+                            .addGroup(textoDataDevolucaoLayout.createSequentialGroup()
                                 .addGap(1, 1, 1)
                                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -598,14 +594,14 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(painelRegistrosImprestimos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textoDataDevolucao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(208, 208, 208))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(painelRegistrosImprestimos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(textoDataDevolucao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -666,25 +662,25 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_selecionarTurmaREActionPerformed
 
-    private void textoDataDevolucaoRE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoDataDevolucaoRE1ActionPerformed
+    private void textoDataDevolucaoREActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoDataDevolucaoREActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textoDataDevolucaoRE1ActionPerformed
+    }//GEN-LAST:event_textoDataDevolucaoREActionPerformed
 
     private void selecionarBimestroREActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecionarBimestroREActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_selecionarBimestroREActionPerformed
 
-    private void textoSituacaoLivrosEmprestadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoSituacaoLivrosEmprestadosActionPerformed
+    private void tituloTabelaSituacaoLivrosEmprestadosREActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloTabelaSituacaoLivrosEmprestadosREActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textoSituacaoLivrosEmprestadosActionPerformed
+    }//GEN-LAST:event_tituloTabelaSituacaoLivrosEmprestadosREActionPerformed
 
-    private void tituloSituacaoDoTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloSituacaoDoTituloActionPerformed
+    private void tituloTabelaSituacaoDoTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloTabelaSituacaoDoTituloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tituloSituacaoDoTituloActionPerformed
+    }//GEN-LAST:event_tituloTabelaSituacaoDoTituloActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void tituloTabelaSituacaoAlunoREActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloTabelaSituacaoAlunoREActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_tituloTabelaSituacaoAlunoREActionPerformed
 
     private void botaoRenovarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoRenovarActionPerformed
         // TODO add your handling code here:
@@ -742,6 +738,7 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
     private javax.swing.JMenu guiaRankingLeitores;
     private javax.swing.JLabel iconeBilblioteca;
     private javax.swing.JLabel iconeRE;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
@@ -752,35 +749,35 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JPanel painelRegistrosImprestimos;
     private javax.swing.JPanel paineliconeSyncriaRegistros;
-    private javax.swing.JComboBox<String> selecionarAlunoRE;
     private javax.swing.JComboBox<String> selecionarAlunoRE1;
     private javax.swing.JComboBox<String> selecionarBimestroRE;
+    private javax.swing.JComboBox<String> selecionarTituloLivro;
     private javax.swing.JComboBox<String> selecionarTurmaRE;
     private javax.swing.JComboBox<String> selecionarTurnoRE;
     private javax.swing.JTable tabelaDataTrocaRE;
     private javax.swing.JTable tabelaLivrosAlugadosRE;
-    private javax.swing.JTable tabelaLocalizacaoLivroBiblioteca;
+    private javax.swing.JTable tabelaLocalizacaoLivroBibliotecaRE;
     private javax.swing.JTable tabelaSituacaoAlunoRE;
-    private javax.swing.JTable tabelaSituacaoLivrosEmprestados;
+    private javax.swing.JTable tabelaSituacaoLivrosEmprestadosRE;
     private javax.swing.JTable tabelaSituacaoRE;
-    private javax.swing.JTable tabelaSituacaoTítulo;
-    private javax.swing.JTextField textoDataDevolucaoRE1;
+    private javax.swing.JTable tabelaSituacaoTítuloRE;
+    private javax.swing.JPanel textoDataDevolucao;
+    private javax.swing.JTextField textoDataDevolucaoRE;
     private javax.swing.JTextField textoDataRetiradaRE;
     private javax.swing.JTextField textoRegistrosRE;
-    private javax.swing.JTextField textoSituacaoLivrosEmprestados;
     private javax.swing.JLabel tituloAlunoRE;
     private javax.swing.JLabel tituloBibliotecaSyncria;
     private javax.swing.JLabel tituloBimestreRE;
     private javax.swing.JLabel tituloCodigoDeTurmaRE;
-    private javax.swing.JLabel tituloDataDevolucaoRE1;
-    private javax.swing.JLabel tituloDataRetiradaRE;
+    private javax.swing.JLabel tituloDataDevolucaoRE;
     private javax.swing.JLabel tituloDataRetiradaRE1;
-    private javax.swing.JLabel tituloRegistrosImprestimos;
+    private javax.swing.JLabel tituloDoLivroRE;
+    private javax.swing.JLabel tituloRegistrosEmprestimos;
     private javax.swing.JLabel tituloRegistrosRE;
-    private javax.swing.JTextField tituloSituacaoDoTitulo;
+    private javax.swing.JTextField tituloTabelaSituacaoAlunoRE;
+    private javax.swing.JTextField tituloTabelaSituacaoDoTitulo;
+    private javax.swing.JTextField tituloTabelaSituacaoLivrosEmprestadosRE;
     private javax.swing.JLabel tituloTurnosRE;
     // End of variables declaration//GEN-END:variables
 }
