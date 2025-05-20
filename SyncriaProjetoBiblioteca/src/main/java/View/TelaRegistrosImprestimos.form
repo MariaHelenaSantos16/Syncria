@@ -80,7 +80,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="painelRegistrosImprestimos" min="-2" max="-2" attributes="0"/>
+              <Component id="textoDataDevolucao" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -89,14 +89,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-              <Component id="painelRegistrosImprestimos" max="32767" attributes="0"/>
+              <Component id="textoDataDevolucao" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="painelRegistrosImprestimos">
+    <Container class="javax.swing.JPanel" name="textoDataDevolucao">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -120,9 +120,9 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="butaoDataRetiradaRE" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="selecionarAlunoRE" min="-2" pref="402" max="-2" attributes="0"/>
-                                      <Component id="tituloDataRetiradaRE" min="-2" max="-2" attributes="0"/>
-                                      <Component id="tituloDataDevolucaoRE1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="selecionarTituloLivro" min="-2" pref="402" max="-2" attributes="0"/>
+                                      <Component id="tituloDoLivroRE" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tituloDataDevolucaoRE" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="tituloRegistrosRE" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="textoRegistrosRE" alignment="0" min="-2" pref="402" max="-2" attributes="0"/>
                                   </Group>
@@ -135,7 +135,7 @@
                               </Group>
                               <Component id="selecionarBimestroRE" alignment="0" min="-2" pref="402" max="-2" attributes="0"/>
                               <Component id="tituloBimestreRE" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="textoDataDevolucaoRE1" min="-2" pref="402" max="-2" attributes="0"/>
+                              <Component id="textoDataDevolucaoRE" min="-2" pref="402" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -250,21 +250,21 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="tituloDataRetiradaRE" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                              <Component id="tituloDoLivroRE" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                               <Component id="tituloTabelaSituacaoAlunoRE" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="selecionarAlunoRE" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="selecionarTituloLivro" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Component id="tituloRegistrosRE" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="textoRegistrosRE" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                  <Component id="tituloDataDevolucaoRE1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tituloDataDevolucaoRE" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="textoDataDevolucaoRE1" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="textoDataDevolucaoRE" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="tituloBimestreRE" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -438,7 +438,7 @@
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="tituloDataRetiradaRE">
+        <Component class="javax.swing.JLabel" name="tituloDoLivroRE">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="1"/>
@@ -449,7 +449,7 @@
             <Property name="text" type="java.lang.String" value="T&#xed;tulo do Livro:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="selecionarAlunoRE">
+        <Component class="javax.swing.JComboBox" name="selecionarTituloLivro">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -525,7 +525,7 @@
             <Property name="text" type="java.lang.String" value="Hoje"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="tituloDataDevolucaoRE1">
+        <Component class="javax.swing.JLabel" name="tituloDataDevolucaoRE">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="1"/>
@@ -592,14 +592,14 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="textoDataDevolucaoRE1">
+        <Component class="javax.swing.JTextField" name="textoDataDevolucaoRE">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoDataDevolucaoRE1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoDataDevolucaoREActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="selecionarBimestroRE">
