@@ -550,7 +550,7 @@
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="iconeRE" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="tituloRegistrosImprestimos" min="-2" max="-2" attributes="0"/>
+                      <Component id="tituloRegistrosEmprestimos" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -562,7 +562,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="iconeRE" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="tituloRegistrosImprestimos" min="-2" max="-2" attributes="0"/>
+                              <Component id="tituloRegistrosEmprestimos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -572,7 +572,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="tituloRegistrosImprestimos">
+            <Component class="javax.swing.JLabel" name="tituloRegistrosEmprestimos">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="36" style="1"/>
@@ -580,7 +580,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Registros de Imprestimos"/>
+                <Property name="text" type="java.lang.String" value="Registros de Empr&#xe9;stimos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="iconeRE">

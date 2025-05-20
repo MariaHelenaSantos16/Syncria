@@ -46,7 +46,7 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         butaoDataRetiradaRE = new javax.swing.JButton();
         tituloDataDevolucaoRE = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        tituloRegistrosImprestimos = new javax.swing.JLabel();
+        tituloRegistrosEmprestimos = new javax.swing.JLabel();
         iconeRE = new javax.swing.JLabel();
         textoDataDevolucaoRE = new javax.swing.JTextField();
         selecionarBimestroRE = new javax.swing.JComboBox<>();
@@ -193,9 +193,9 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(73, 112, 138));
 
-        tituloRegistrosImprestimos.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        tituloRegistrosImprestimos.setForeground(new java.awt.Color(0, 0, 0));
-        tituloRegistrosImprestimos.setText("Registros de Imprestimos");
+        tituloRegistrosEmprestimos.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        tituloRegistrosEmprestimos.setForeground(new java.awt.Color(0, 0, 0));
+        tituloRegistrosEmprestimos.setText("Registros de Empréstimos");
 
         iconeRE.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro_(1).png")); // NOI18N
 
@@ -207,7 +207,7 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(iconeRE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tituloRegistrosImprestimos)
+                .addComponent(tituloRegistrosEmprestimos)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -217,7 +217,7 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(iconeRE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(tituloRegistrosImprestimos)
+                        .addComponent(tituloRegistrosEmprestimos)
                         .addGap(8, 8, 8)))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
@@ -773,7 +773,7 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
     private javax.swing.JLabel tituloDataDevolucaoRE;
     private javax.swing.JLabel tituloDataRetiradaRE1;
     private javax.swing.JLabel tituloDoLivroRE;
-    private javax.swing.JLabel tituloRegistrosImprestimos;
+    private javax.swing.JLabel tituloRegistrosEmprestimos;
     private javax.swing.JLabel tituloRegistrosRE;
     private javax.swing.JTextField tituloTabelaSituacaoAlunoRE;
     private javax.swing.JTextField tituloTabelaSituacaoDoTitulo;
