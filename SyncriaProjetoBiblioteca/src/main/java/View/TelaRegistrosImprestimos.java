@@ -51,23 +51,23 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         selecionarBimestroRE = new javax.swing.JComboBox<>();
         textoSituacaoLivrosEmprestados = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jTextField2 = new javax.swing.JTextField();
+        tabelaSituacaoTítulo = new javax.swing.JTable();
+        tituloSituacaoDoTitulo = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tabelaLocalizacaoLivroBiblioteca = new javax.swing.JTable();
         tituloDataRetiradaRE1 = new javax.swing.JLabel();
         selecionarAlunoRE1 = new javax.swing.JComboBox<>();
         jTextField3 = new javax.swing.JTextField();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tabelaSituacaoAlunoRE = new javax.swing.JTable();
         jScrollPane6 = new javax.swing.JScrollPane();
         tabelaSituacaoLivrosEmprestados = new javax.swing.JTable();
         jScrollPane7 = new javax.swing.JScrollPane();
-        tabelaRegistroRE2 = new javax.swing.JTable();
+        tabelaDataTrocaRE = new javax.swing.JTable();
         jScrollPane8 = new javax.swing.JScrollPane();
-        tabelaRegistroRE3 = new javax.swing.JTable();
+        tabelaLivrosAlugadosRE = new javax.swing.JTable();
         jScrollPane9 = new javax.swing.JScrollPane();
-        tabelaRegistroRE4 = new javax.swing.JTable();
+        tabelaSituacaoRE = new javax.swing.JTable();
         botaoGravar = new javax.swing.JButton();
         botaoRenovar = new javax.swing.JButton();
         botaoDevolver = new javax.swing.JButton();
@@ -239,8 +239,8 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setBackground(new java.awt.Color(255, 255, 255));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaSituacaoTítulo.setBackground(new java.awt.Color(255, 255, 255));
+        tabelaSituacaoTítulo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -251,23 +251,23 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 "Emprestados", "No Acervo"
             }
         ));
-        jTable1.setToolTipText("\n");
-        jScrollPane1.setViewportView(jTable1);
+        tabelaSituacaoTítulo.setToolTipText("\n");
+        jScrollPane1.setViewportView(tabelaSituacaoTítulo);
 
-        jTextField2.setBackground(new java.awt.Color(102, 204, 255));
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField2.setText("Situação do Título");
-        jTextField2.setToolTipText("");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        tituloSituacaoDoTitulo.setBackground(new java.awt.Color(102, 204, 255));
+        tituloSituacaoDoTitulo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tituloSituacaoDoTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        tituloSituacaoDoTitulo.setText("Situação do Título");
+        tituloSituacaoDoTitulo.setToolTipText("");
+        tituloSituacaoDoTitulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                tituloSituacaoDoTituloActionPerformed(evt);
             }
         });
 
-        jTable2.setBackground(new java.awt.Color(255, 255, 255));
-        jTable2.setForeground(new java.awt.Color(0, 0, 0));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaLocalizacaoLivroBiblioteca.setBackground(new java.awt.Color(255, 255, 255));
+        tabelaLocalizacaoLivroBiblioteca.setForeground(new java.awt.Color(0, 0, 0));
+        tabelaLocalizacaoLivroBiblioteca.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -278,7 +278,7 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 "Localização do LIvro na biblioteca"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tabelaLocalizacaoLivroBiblioteca);
 
         tituloDataRetiradaRE1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         tituloDataRetiradaRE1.setForeground(new java.awt.Color(0, 0, 0));
@@ -299,9 +299,9 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
             }
         });
 
-        jTable3.setBackground(new java.awt.Color(255, 255, 255));
-        jTable3.setForeground(new java.awt.Color(255, 255, 255));
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaSituacaoAlunoRE.setBackground(new java.awt.Color(255, 255, 255));
+        tabelaSituacaoAlunoRE.setForeground(new java.awt.Color(255, 255, 255));
+        tabelaSituacaoAlunoRE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -312,7 +312,7 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 "Emprestados", "Devolvidos", "Devolvendo"
             }
         ));
-        jScrollPane4.setViewportView(jTable3);
+        jScrollPane4.setViewportView(tabelaSituacaoAlunoRE);
 
         tabelaSituacaoLivrosEmprestados.setBackground(new java.awt.Color(255, 255, 255));
         tabelaSituacaoLivrosEmprestados.setForeground(new java.awt.Color(0, 0, 0));
@@ -330,9 +330,9 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         tabelaSituacaoLivrosEmprestados.setSelectionBackground(new java.awt.Color(153, 255, 255));
         jScrollPane6.setViewportView(tabelaSituacaoLivrosEmprestados);
 
-        tabelaRegistroRE2.setBackground(new java.awt.Color(255, 255, 255));
-        tabelaRegistroRE2.setForeground(new java.awt.Color(0, 0, 0));
-        tabelaRegistroRE2.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaDataTrocaRE.setBackground(new java.awt.Color(255, 255, 255));
+        tabelaDataTrocaRE.setForeground(new java.awt.Color(0, 0, 0));
+        tabelaDataTrocaRE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {""},
                 {null},
@@ -343,12 +343,12 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 "Troca Data"
             }
         ));
-        tabelaRegistroRE2.setSelectionBackground(new java.awt.Color(153, 255, 255));
-        jScrollPane7.setViewportView(tabelaRegistroRE2);
+        tabelaDataTrocaRE.setSelectionBackground(new java.awt.Color(153, 255, 255));
+        jScrollPane7.setViewportView(tabelaDataTrocaRE);
 
-        tabelaRegistroRE3.setBackground(new java.awt.Color(255, 255, 255));
-        tabelaRegistroRE3.setForeground(new java.awt.Color(0, 0, 0));
-        tabelaRegistroRE3.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaLivrosAlugadosRE.setBackground(new java.awt.Color(255, 255, 255));
+        tabelaLivrosAlugadosRE.setForeground(new java.awt.Color(0, 0, 0));
+        tabelaLivrosAlugadosRE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {""},
                 {null},
@@ -359,12 +359,12 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 "LIVROS ALUGADOS PELO ALUNO(A)"
             }
         ));
-        tabelaRegistroRE3.setSelectionBackground(new java.awt.Color(153, 255, 255));
-        jScrollPane8.setViewportView(tabelaRegistroRE3);
+        tabelaLivrosAlugadosRE.setSelectionBackground(new java.awt.Color(153, 255, 255));
+        jScrollPane8.setViewportView(tabelaLivrosAlugadosRE);
 
-        tabelaRegistroRE4.setBackground(new java.awt.Color(255, 255, 255));
-        tabelaRegistroRE4.setForeground(new java.awt.Color(0, 0, 0));
-        tabelaRegistroRE4.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaSituacaoRE.setBackground(new java.awt.Color(255, 255, 255));
+        tabelaSituacaoRE.setForeground(new java.awt.Color(0, 0, 0));
+        tabelaSituacaoRE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {""},
                 {null},
@@ -375,8 +375,8 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 "Situação"
             }
         ));
-        tabelaRegistroRE4.setSelectionBackground(new java.awt.Color(153, 255, 255));
-        jScrollPane9.setViewportView(tabelaRegistroRE4);
+        tabelaSituacaoRE.setSelectionBackground(new java.awt.Color(153, 255, 255));
+        jScrollPane9.setViewportView(tabelaSituacaoRE);
 
         botaoGravar.setBackground(new java.awt.Color(255, 204, 0));
         botaoGravar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -462,7 +462,7 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                         .addGap(125, 125, 125)
                         .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
-                                .addComponent(jTextField2)
+                                .addComponent(tituloSituacaoDoTitulo)
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(357, 357, 357))
@@ -507,11 +507,11 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                         .addGap(36, 36, 36)
                         .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tituloSituacaoDoTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textoDataRetiradaRE, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(butaoDataRetiradaRE)
@@ -520,7 +520,8 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelRegistrosImprestimosLayout.createSequentialGroup()
-                        .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(3, 3, 3)
+                        .addGroup(painelRegistrosImprestimosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(tituloDataRetiradaRE, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -677,9 +678,9 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textoSituacaoLivrosEmprestadosActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void tituloSituacaoDoTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloSituacaoDoTituloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_tituloSituacaoDoTituloActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
@@ -751,10 +752,6 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JPanel painelRegistrosImprestimos;
     private javax.swing.JPanel paineliconeSyncriaRegistros;
@@ -763,10 +760,13 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> selecionarBimestroRE;
     private javax.swing.JComboBox<String> selecionarTurmaRE;
     private javax.swing.JComboBox<String> selecionarTurnoRE;
-    private javax.swing.JTable tabelaRegistroRE2;
-    private javax.swing.JTable tabelaRegistroRE3;
-    private javax.swing.JTable tabelaRegistroRE4;
+    private javax.swing.JTable tabelaDataTrocaRE;
+    private javax.swing.JTable tabelaLivrosAlugadosRE;
+    private javax.swing.JTable tabelaLocalizacaoLivroBiblioteca;
+    private javax.swing.JTable tabelaSituacaoAlunoRE;
     private javax.swing.JTable tabelaSituacaoLivrosEmprestados;
+    private javax.swing.JTable tabelaSituacaoRE;
+    private javax.swing.JTable tabelaSituacaoTítulo;
     private javax.swing.JTextField textoDataDevolucaoRE1;
     private javax.swing.JTextField textoDataRetiradaRE;
     private javax.swing.JTextField textoRegistrosRE;
@@ -780,6 +780,7 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
     private javax.swing.JLabel tituloDataRetiradaRE1;
     private javax.swing.JLabel tituloRegistrosImprestimos;
     private javax.swing.JLabel tituloRegistrosRE;
+    private javax.swing.JTextField tituloSituacaoDoTitulo;
     private javax.swing.JLabel tituloTurnosRE;
     // End of variables declaration//GEN-END:variables
 }
