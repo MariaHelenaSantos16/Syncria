@@ -36,7 +36,7 @@ public class Telalogin extends javax.swing.JFrame {
         imagemEmpresa = new javax.swing.JLabel();
         usuarioLogin = new javax.swing.JLabel();
         botaoSenhaEsquecida = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        botaoCadastrar = new javax.swing.JButton();
 
         jLabel2.setText("jLabel2");
 
@@ -95,11 +95,11 @@ public class Telalogin extends javax.swing.JFrame {
         botaoSenhaEsquecida.setText("Esqueci a senha");
         painelLogin.add(botaoSenhaEsquecida, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(153, 255, 153));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Cadastrar");
-        painelLogin.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, -1, -1));
+        botaoCadastrar.setBackground(new java.awt.Color(153, 255, 153));
+        botaoCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botaoCadastrar.setForeground(new java.awt.Color(0, 0, 0));
+        botaoCadastrar.setText("Cadastrar");
+        painelLogin.add(botaoCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, -1, -1));
 
         javax.swing.GroupLayout tela1Layout = new javax.swing.GroupLayout(tela1);
         tela1.setLayout(tela1Layout);
@@ -185,11 +185,11 @@ public class Telalogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoCadastrar;
     private javax.swing.JLabel botaoSenhaEsquecida;
     private javax.swing.JButton butaoEntrar;
     private javax.swing.JTextField escrevaGmail;
     private javax.swing.JLabel imagemEmpresa;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel loginSenha;
     private javax.swing.JPanel painelLogin;
