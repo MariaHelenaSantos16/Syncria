@@ -10,13 +10,13 @@ package Model;
  */
 //Funcionario login é cadastro
 public class FuncionariosModel {
-    private String login;
+    private String usuario;
     private String senha;
     private String cadastro;
     private String senhacadastro;
 
     public FuncionariosModel(String login, String senha, String cadastro, String senhacadastro) {
-        this.login = login;
+        this.usuario= login;
         this.senha = senha;
         this.cadastro = cadastro;
         this.senhacadastro = senhacadastro;
@@ -33,11 +33,11 @@ public class FuncionariosModel {
     //metodos getter e setter
 //setter serve para visualizar os dados
     public String getLogin() {
-        return login;
+        return usuario;
     }
     //setter serve para guardar os dados
     public void setLogin(String login) {
-        this.login = login;
+        this.usuario = login;
     }
     //metodo com retorno tipo String
     public String getSenha() {
