@@ -55,7 +55,7 @@ public class Telalogin extends javax.swing.JFrame {
         loginSenha.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         loginSenha.setForeground(new java.awt.Color(0, 0, 0));
         loginSenha.setText("Senha:");
-        painelLogin.add(loginSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 60, 20));
+        painelLogin.add(loginSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 60, 20));
 
         escrevaGmail.setBackground(new java.awt.Color(255, 255, 255));
         escrevaGmail.setForeground(new java.awt.Color(0, 0, 0));
@@ -64,7 +64,7 @@ public class Telalogin extends javax.swing.JFrame {
                 escrevaGmailActionPerformed(evt);
             }
         });
-        painelLogin.add(escrevaGmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 270, 20));
+        painelLogin.add(escrevaGmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 270, 20));
 
         butaoEntrar.setBackground(new java.awt.Color(51, 255, 51));
         butaoEntrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -75,48 +75,47 @@ public class Telalogin extends javax.swing.JFrame {
                 butaoEntrarActionPerformed(evt);
             }
         });
-        painelLogin.add(butaoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 100, 30));
+        painelLogin.add(butaoEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 100, 30));
 
         senhaLogin.setBackground(new java.awt.Color(255, 255, 255));
         senhaLogin.setForeground(new java.awt.Color(0, 0, 0));
-        painelLogin.add(senhaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 270, -1));
+        painelLogin.add(senhaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 270, -1));
 
         imagemEmpresa.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        imagemEmpresa.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\Syncria_-_Technology (2).png")); // NOI18N
         painelLogin.add(imagemEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, 90));
 
         usuarioLogin.setBackground(new java.awt.Color(0, 0, 0));
         usuarioLogin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         usuarioLogin.setForeground(new java.awt.Color(0, 0, 0));
         usuarioLogin.setText("Usuário:");
-        painelLogin.add(usuarioLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 70, 20));
+        painelLogin.add(usuarioLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 70, 20));
 
         botaoSenhaEsquecida.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        botaoSenhaEsquecida.setForeground(new java.awt.Color(255, 0, 0));
-        botaoSenhaEsquecida.setText("esqueci a senha");
-        painelLogin.add(botaoSenhaEsquecida, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, -1, -1));
+        botaoSenhaEsquecida.setForeground(new java.awt.Color(0, 102, 204));
+        botaoSenhaEsquecida.setText("Esqueci a senha");
+        painelLogin.add(botaoSenhaEsquecida, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(51, 255, 51));
+        jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("cadastro");
-        painelLogin.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, -1, -1));
+        jButton1.setText("Cadastrar");
+        painelLogin.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, -1, -1));
 
         javax.swing.GroupLayout tela1Layout = new javax.swing.GroupLayout(tela1);
         tela1.setLayout(tela1Layout);
         tela1Layout.setHorizontalGroup(
             tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela1Layout.createSequentialGroup()
-                .addContainerGap(283, Short.MAX_VALUE)
+            .addGroup(tela1Layout.createSequentialGroup()
+                .addGap(234, 234, 234)
                 .addComponent(painelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(200, 200, 200))
+                .addContainerGap(249, Short.MAX_VALUE))
         );
         tela1Layout.setVerticalGroup(
             tela1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tela1Layout.createSequentialGroup()
-                .addGap(140, 140, 140)
+                .addGap(123, 123, 123)
                 .addComponent(painelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
