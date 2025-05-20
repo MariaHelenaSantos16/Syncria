@@ -128,7 +128,7 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tituloTabelaSituacaoAluno" pref="260" max="32767" attributes="0"/>
+                                      <Component id="tituloTabelaSituacaoAlunoRE" pref="260" max="32767" attributes="0"/>
                                       <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
                                       <Component id="jScrollPane4" alignment="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -179,7 +179,7 @@
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="tituloTabelaSituacaoLivrosEmprestados" alignment="0" pref="341" max="32767" attributes="0"/>
+                                      <Component id="tituloTabelaSituacaoLivrosEmprestadosRE" alignment="0" pref="341" max="32767" attributes="0"/>
                                       <Component id="jScrollPane6" alignment="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
@@ -209,7 +209,7 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="tituloTabelaSituacaoLivrosEmprestados" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tituloTabelaSituacaoLivrosEmprestadosRE" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="botaoGravar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -251,7 +251,7 @@
                           <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="tituloDataRetiradaRE" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                              <Component id="tituloTabelaSituacaoAluno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tituloTabelaSituacaoAlunoRE" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -631,7 +631,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="tituloTabelaSituacaoLivrosEmprestados">
+        <Component class="javax.swing.JTextField" name="tituloTabelaSituacaoLivrosEmprestadosRE">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="ff" red="ff" type="rgb"/>
@@ -645,7 +645,7 @@
             <Property name="text" type="java.lang.String" value="Situa&#xe7;&#xe3;o dos Livros Emprestados"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tituloTabelaSituacaoLivrosEmprestadosActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tituloTabelaSituacaoLivrosEmprestadosREActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -655,7 +655,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tabelaSituacaoT&#xed;tulo">
+            <Component class="javax.swing.JTable" name="tabelaSituacaoT&#xed;tuloRE">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -696,7 +696,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tabelaLocalizacaoLivroBiblioteca">
+            <Component class="javax.swing.JTable" name="tabelaLocalizacaoLivroBibliotecaRE">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -744,7 +744,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="tituloTabelaSituacaoAluno">
+        <Component class="javax.swing.JTextField" name="tituloTabelaSituacaoAlunoRE">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="ff" red="ff" type="rgb"/>
@@ -758,7 +758,7 @@
             <Property name="text" type="java.lang.String" value="Situa&#xe7;&#xe3;o do Aluno(a)"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tituloTabelaSituacaoAlunoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tituloTabelaSituacaoAlunoREActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane4">
@@ -794,7 +794,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tabelaSituacaoLivrosEmprestados">
+            <Component class="javax.swing.JTable" name="tabelaSituacaoLivrosEmprestadosRE">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
