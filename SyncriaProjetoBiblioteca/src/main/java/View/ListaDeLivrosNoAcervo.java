@@ -36,14 +36,14 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         comboFiltro = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaRegistro = new javax.swing.JTable();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        menuUm = new javax.swing.JMenu();
-        menuDois = new javax.swing.JMenu();
-        menuTres = new javax.swing.JMenu();
-        menuQuatro = new javax.swing.JMenu();
-        menuSeis = new javax.swing.JMenu();
-        menuSete = new javax.swing.JMenu();
-        iconeGráficos = new javax.swing.JMenu();
+        menuDeNavegacao = new javax.swing.JMenuBar();
+        guiaRegistroEmprestimo = new javax.swing.JMenu();
+        guiaListaLivrosEmprestados = new javax.swing.JMenu();
+        guiaCadastroLivros = new javax.swing.JMenu();
+        guiaListaLivrosAcervo = new javax.swing.JMenu();
+        guiaRankingLeitores = new javax.swing.JMenu();
+        guiaBancoDadosTurmas = new javax.swing.JMenu();
+        guiaGrafico = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista de Livros no Acervo");
@@ -81,7 +81,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
                 .addComponent(livroI)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(escreva1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1407, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelWhiteLayout.setVerticalGroup(
             panelWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -843,7 +843,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
             .addGroup(princPanelLayout.createSequentialGroup()
                 .addGroup(princPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(panelWhite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1920, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(painelSec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -869,59 +869,59 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
                 .addGap(0, 0, 0))
         );
 
-        menuUm.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro.png")); // NOI18N
-        menuUm.setText("Registro de Empréstimo |");
-        menuUm.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaRegistroEmprestimo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro.png")); // NOI18N
+        guiaRegistroEmprestimo.setText("Registro de Empréstimo |");
+        guiaRegistroEmprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                menuUmMouseClicked(evt);
+                guiaRegistroEmprestimoMouseClicked(evt);
             }
         });
-        jMenuBar1.add(menuUm);
+        menuDeNavegacao.add(guiaRegistroEmprestimo);
 
-        menuDois.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro emp. 24.png")); // NOI18N
-        menuDois.setText("Lista de Livros Emprestados |");
-        menuDois.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaListaLivrosEmprestados.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro emp. 24.png")); // NOI18N
+        guiaListaLivrosEmprestados.setText("Lista de Livros Emprestados |");
+        guiaListaLivrosEmprestados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                menuDoisMouseClicked(evt);
+                guiaListaLivrosEmprestadosMouseClicked(evt);
             }
         });
-        jMenuBar1.add(menuDois);
+        menuDeNavegacao.add(guiaListaLivrosEmprestados);
 
-        menuTres.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\cadastro de livros 24.png")); // NOI18N
-        menuTres.setText("Cadastro de Livros |");
-        menuTres.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaCadastroLivros.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\cadastro de livros 24.png")); // NOI18N
+        guiaCadastroLivros.setText("Cadastro de Livros |");
+        guiaCadastroLivros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                menuTresMouseClicked(evt);
+                guiaCadastroLivrosMouseClicked(evt);
             }
         });
-        jMenuBar1.add(menuTres);
+        menuDeNavegacao.add(guiaCadastroLivros);
 
-        menuQuatro.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\open-book.png")); // NOI18N
-        menuQuatro.setText("Lista de Livros no Acervo |");
-        jMenuBar1.add(menuQuatro);
+        guiaListaLivrosAcervo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\open-book.png")); // NOI18N
+        guiaListaLivrosAcervo.setText("Lista de Livros no Acervo |");
+        menuDeNavegacao.add(guiaListaLivrosAcervo);
 
-        menuSeis.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\ranking.png")); // NOI18N
-        menuSeis.setText("Ranking dos Leitores |");
-        menuSeis.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaRankingLeitores.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\ranking.png")); // NOI18N
+        guiaRankingLeitores.setText("Ranking dos Leitores |");
+        guiaRankingLeitores.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                menuSeisMouseClicked(evt);
+                guiaRankingLeitoresMouseClicked(evt);
             }
         });
-        jMenuBar1.add(menuSeis);
+        menuDeNavegacao.add(guiaRankingLeitores);
 
-        menuSete.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\grupo-de-usuarios_(1).png")); // NOI18N
-        menuSete.setText("Banco de Dados das Turmas |");
-        menuSete.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaBancoDadosTurmas.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\grupo-de-usuarios_(1).png")); // NOI18N
+        guiaBancoDadosTurmas.setText("Banco de Dados das Turmas |");
+        guiaBancoDadosTurmas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                menuSeteMouseClicked(evt);
+                guiaBancoDadosTurmasMouseClicked(evt);
             }
         });
-        jMenuBar1.add(menuSete);
+        menuDeNavegacao.add(guiaBancoDadosTurmas);
 
-        iconeGráficos.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\line-chart.png")); // NOI18N
-        jMenuBar1.add(iconeGráficos);
+        guiaGrafico.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\line-chart.png")); // NOI18N
+        menuDeNavegacao.add(guiaGrafico);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(menuDeNavegacao);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -948,7 +948,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_comboFiltroActionPerformed
 
-    private void menuUmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuUmMouseClicked
+    private void guiaRegistroEmprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRegistroEmprestimoMouseClicked
         // TODO add your handling code here:
         
          
@@ -959,9 +959,9 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         // fechar tela de login
                     dispose();
             ;
-    }//GEN-LAST:event_menuUmMouseClicked
+    }//GEN-LAST:event_guiaRegistroEmprestimoMouseClicked
 
-    private void menuDoisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuDoisMouseClicked
+    private void guiaListaLivrosEmprestadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosEmprestadosMouseClicked
         // TODO add your handling code here:
         
         
@@ -972,9 +972,9 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         // fechar tela de login
                     dispose();
             ;
-    }//GEN-LAST:event_menuDoisMouseClicked
+    }//GEN-LAST:event_guiaListaLivrosEmprestadosMouseClicked
 
-    private void menuTresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuTresMouseClicked
+    private void guiaCadastroLivrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaCadastroLivrosMouseClicked
         // TODO add your handling code here:
         
              //criar objeto da classe 
@@ -984,16 +984,16 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         // fechar tela de login
                     dispose();
             ;
-    }//GEN-LAST:event_menuTresMouseClicked
+    }//GEN-LAST:event_guiaCadastroLivrosMouseClicked
 
-    private void menuSeisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuSeisMouseClicked
+    private void guiaRankingLeitoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRankingLeitoresMouseClicked
         // TODO add your handling code here:
         
         
         
-    }//GEN-LAST:event_menuSeisMouseClicked
+    }//GEN-LAST:event_guiaRankingLeitoresMouseClicked
 
-    private void menuSeteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuSeteMouseClicked
+    private void guiaBancoDadosTurmasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaBancoDadosTurmasMouseClicked
         // TODO add your handling code here:
         
         //criar objeto da classe 
@@ -1003,7 +1003,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         // fechar tela de login
                     dispose();
             ;
-    }//GEN-LAST:event_menuSeteMouseClicked
+    }//GEN-LAST:event_guiaBancoDadosTurmasMouseClicked
 
     
     /**
@@ -1045,17 +1045,17 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboFiltro;
     private javax.swing.JLabel escreva1;
     private javax.swing.JLabel escrevaLista;
-    private javax.swing.JMenu iconeGráficos;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu guiaBancoDadosTurmas;
+    private javax.swing.JMenu guiaCadastroLivros;
+    private javax.swing.JMenu guiaGrafico;
+    private javax.swing.JMenu guiaListaLivrosAcervo;
+    private javax.swing.JMenu guiaListaLivrosEmprestados;
+    private javax.swing.JMenu guiaRankingLeitores;
+    private javax.swing.JMenu guiaRegistroEmprestimo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel listihna;
     private javax.swing.JLabel livroI;
-    private javax.swing.JMenu menuDois;
-    private javax.swing.JMenu menuQuatro;
-    private javax.swing.JMenu menuSeis;
-    private javax.swing.JMenu menuSete;
-    private javax.swing.JMenu menuTres;
-    private javax.swing.JMenu menuUm;
+    private javax.swing.JMenuBar menuDeNavegacao;
     private javax.swing.JPanel painelSec;
     private javax.swing.JPanel panelWhite;
     private javax.swing.JPanel princPanel;

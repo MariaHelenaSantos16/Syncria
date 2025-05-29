@@ -38,14 +38,14 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
         tabelaRolagem = new javax.swing.JScrollPane();
         priTabela = new javax.swing.JTable();
         botao1 = new javax.swing.JButton();
-        barraMenu = new javax.swing.JMenuBar();
-        priMenu = new javax.swing.JMenu();
-        segMenu = new javax.swing.JMenu();
-        terMenu = new javax.swing.JMenu();
-        quaMenu = new javax.swing.JMenu();
-        sexMenu = new javax.swing.JMenu();
-        setMenu = new javax.swing.JMenu();
-        iconeGrafico = new javax.swing.JMenu();
+        menuDeNavegacao = new javax.swing.JMenuBar();
+        guiaRegistroEmprestimo = new javax.swing.JMenu();
+        guiaListaLivrosEmprestados = new javax.swing.JMenu();
+        guiaCadastroLivros = new javax.swing.JMenu();
+        guiaListaLivrosAcervo = new javax.swing.JMenu();
+        guiaRankingLeitores = new javax.swing.JMenu();
+        guiaBancoDadosTurmas = new javax.swing.JMenu();
+        guiaGrafico = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista de Livros Emprestados");
@@ -237,10 +237,10 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
                 .addComponent(simboloPonto)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(escrevaLista)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1243, Short.MAX_VALUE)
                 .addComponent(botao1)
                 .addGap(37, 37, 37))
-            .addComponent(tabelaRolagem, javax.swing.GroupLayout.DEFAULT_SIZE, 1310, Short.MAX_VALUE)
+            .addComponent(tabelaRolagem)
         );
         penalBrancoLayout.setVerticalGroup(
             penalBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,7 +253,7 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
                     .addComponent(simboloPonto, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(filtrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(tabelaRolagem, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -280,67 +280,67 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
                         .addComponent(livroI, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(escreva1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(penalBranco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(penalBranco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        priMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro.png")); // NOI18N
-        priMenu.setText(" Registro de Empréstimo |");
-        priMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaRegistroEmprestimo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro.png")); // NOI18N
+        guiaRegistroEmprestimo.setText(" Registro de Empréstimo |");
+        guiaRegistroEmprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                priMenuMouseClicked(evt);
+                guiaRegistroEmprestimoMouseClicked(evt);
             }
         });
-        barraMenu.add(priMenu);
+        menuDeNavegacao.add(guiaRegistroEmprestimo);
 
-        segMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro emp. 24.png")); // NOI18N
-        segMenu.setText("Lista de Livros Emprestados |");
-        segMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaListaLivrosEmprestados.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro emp. 24.png")); // NOI18N
+        guiaListaLivrosEmprestados.setText("Lista de Livros Emprestados |");
+        guiaListaLivrosEmprestados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                segMenuMouseClicked(evt);
+                guiaListaLivrosEmprestadosMouseClicked(evt);
             }
         });
-        barraMenu.add(segMenu);
+        menuDeNavegacao.add(guiaListaLivrosEmprestados);
 
-        terMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\cadastro de livros 24.png")); // NOI18N
-        terMenu.setText("Cadastro de Livros |");
-        terMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaCadastroLivros.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\cadastro de livros 24.png")); // NOI18N
+        guiaCadastroLivros.setText("Cadastro de Livros |");
+        guiaCadastroLivros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                terMenuMouseClicked(evt);
+                guiaCadastroLivrosMouseClicked(evt);
             }
         });
-        barraMenu.add(terMenu);
+        menuDeNavegacao.add(guiaCadastroLivros);
 
-        quaMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\open-book.png")); // NOI18N
-        quaMenu.setText("Lista de Livros no Acervo |");
-        quaMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaListaLivrosAcervo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\open-book.png")); // NOI18N
+        guiaListaLivrosAcervo.setText("Lista de Livros no Acervo |");
+        guiaListaLivrosAcervo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                quaMenuMouseClicked(evt);
+                guiaListaLivrosAcervoMouseClicked(evt);
             }
         });
-        barraMenu.add(quaMenu);
+        menuDeNavegacao.add(guiaListaLivrosAcervo);
 
-        sexMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\ranking.png")); // NOI18N
-        sexMenu.setText("Ranking dos Leitores |");
-        sexMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaRankingLeitores.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\ranking.png")); // NOI18N
+        guiaRankingLeitores.setText("Ranking dos Leitores |");
+        guiaRankingLeitores.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                sexMenuMouseClicked(evt);
+                guiaRankingLeitoresMouseClicked(evt);
             }
         });
-        barraMenu.add(sexMenu);
+        menuDeNavegacao.add(guiaRankingLeitores);
 
-        setMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\grupo-de-usuarios_(1).png")); // NOI18N
-        setMenu.setText("Banco de Dados das Turmas |");
-        setMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaBancoDadosTurmas.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\grupo-de-usuarios_(1).png")); // NOI18N
+        guiaBancoDadosTurmas.setText("Banco de Dados das Turmas |");
+        guiaBancoDadosTurmas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                setMenuMouseClicked(evt);
+                guiaBancoDadosTurmasMouseClicked(evt);
             }
         });
-        barraMenu.add(setMenu);
+        menuDeNavegacao.add(guiaBancoDadosTurmas);
 
-        iconeGrafico.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\line-chart.png")); // NOI18N
-        barraMenu.add(iconeGrafico);
+        guiaGrafico.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\line-chart.png")); // NOI18N
+        menuDeNavegacao.add(guiaGrafico);
 
-        setJMenuBar(barraMenu);
+        setJMenuBar(menuDeNavegacao);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -352,9 +352,7 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(principalPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(principalPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -373,13 +371,13 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
     }//GEN-LAST:event_filtrarActionPerformed
 
     
-    private void segMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_segMenuMouseClicked
+    private void guiaListaLivrosEmprestadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosEmprestadosMouseClicked
         // TODO add your handling code here:
         
        
-    }//GEN-LAST:event_segMenuMouseClicked
+    }//GEN-LAST:event_guiaListaLivrosEmprestadosMouseClicked
 
-    private void setMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_setMenuMouseClicked
+    private void guiaBancoDadosTurmasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaBancoDadosTurmasMouseClicked
         // TODO add your handling code here:
           
         //criar objeto da classe 
@@ -389,9 +387,9 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
         // fechar tela de login
                     dispose();
             ;
-    }//GEN-LAST:event_setMenuMouseClicked
+    }//GEN-LAST:event_guiaBancoDadosTurmasMouseClicked
 
-    private void quaMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quaMenuMouseClicked
+    private void guiaListaLivrosAcervoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosAcervoMouseClicked
 
         // TODO add your handling code here:
         
@@ -403,9 +401,9 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
                     dispose();
             ;
         
-    }//GEN-LAST:event_quaMenuMouseClicked
+    }//GEN-LAST:event_guiaListaLivrosAcervoMouseClicked
 
-    private void priMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_priMenuMouseClicked
+    private void guiaRegistroEmprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRegistroEmprestimoMouseClicked
         // TODO add your handling code here:
         
         //criar objeto da classe 
@@ -417,9 +415,9 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
             ;
             
             
-    }//GEN-LAST:event_priMenuMouseClicked
+    }//GEN-LAST:event_guiaRegistroEmprestimoMouseClicked
 
-    private void terMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terMenuMouseClicked
+    private void guiaCadastroLivrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaCadastroLivrosMouseClicked
         // TODO add your handling code here
         
                 //criar objeto da classe 
@@ -429,13 +427,13 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
         // fechar tela de login
                     dispose();
             ;
-    }//GEN-LAST:event_terMenuMouseClicked
+    }//GEN-LAST:event_guiaCadastroLivrosMouseClicked
 
-    private void sexMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sexMenuMouseClicked
+    private void guiaRankingLeitoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRankingLeitoresMouseClicked
         // TODO add your handling code here:
         
         
-    }//GEN-LAST:event_sexMenuMouseClicked
+    }//GEN-LAST:event_guiaRankingLeitoresMouseClicked
 
     
     
@@ -479,23 +477,23 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuBar barraMenu;
     private javax.swing.JButton botao1;
     private javax.swing.JLabel escreva1;
     private javax.swing.JLabel escrevaLista;
     private javax.swing.JComboBox<String> filtrar;
-    private javax.swing.JMenu iconeGrafico;
+    private javax.swing.JMenu guiaBancoDadosTurmas;
+    private javax.swing.JMenu guiaCadastroLivros;
+    private javax.swing.JMenu guiaGrafico;
+    private javax.swing.JMenu guiaListaLivrosAcervo;
+    private javax.swing.JMenu guiaListaLivrosEmprestados;
+    private javax.swing.JMenu guiaRankingLeitores;
+    private javax.swing.JMenu guiaRegistroEmprestimo;
     private javax.swing.JLabel livroI;
+    private javax.swing.JMenuBar menuDeNavegacao;
     private javax.swing.JPanel penalBranco;
-    private javax.swing.JMenu priMenu;
     private javax.swing.JTable priTabela;
     private javax.swing.JPanel principalPainel;
-    private javax.swing.JMenu quaMenu;
-    private javax.swing.JMenu segMenu;
-    private javax.swing.JMenu setMenu;
-    private javax.swing.JMenu sexMenu;
     private javax.swing.JLabel simboloPonto;
     private javax.swing.JScrollPane tabelaRolagem;
-    private javax.swing.JMenu terMenu;
     // End of variables declaration//GEN-END:variables
 }
