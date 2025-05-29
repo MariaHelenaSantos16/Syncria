@@ -8,12 +8,12 @@ package View;
  *
  * @author ALUNO
  */
-public class TelaRegistrosImprestimos extends javax.swing.JFrame {
+public class TelaRegistrosEmprestimos extends javax.swing.JFrame {
 
     /**
      * Creates new form RegistrosImprestimos
      */
-    public TelaRegistrosImprestimos() {
+    public TelaRegistrosEmprestimos() {
         initComponents();
     }
 
@@ -88,8 +88,6 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         tituloBibliotecaSyncria.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         tituloBibliotecaSyncria.setForeground(new java.awt.Color(0, 0, 0));
         tituloBibliotecaSyncria.setText("Biblioteca Syncria");
-
-        iconeBilblioteca.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro_(1)_(2).png")); // NOI18N
 
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\logout_(1).png")); // NOI18N
@@ -196,8 +194,6 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
         tituloRegistrosEmprestimos.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         tituloRegistrosEmprestimos.setForeground(new java.awt.Color(0, 0, 0));
         tituloRegistrosEmprestimos.setText("Registros de Empréstimos");
-
-        iconeRE.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro_(1).png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -707,21 +703,23 @@ public class TelaRegistrosImprestimos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaRegistrosImprestimos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRegistrosEmprestimos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaRegistrosImprestimos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRegistrosEmprestimos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaRegistrosImprestimos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRegistrosEmprestimos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaRegistrosImprestimos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaRegistrosEmprestimos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaRegistrosImprestimos().setVisible(true);
+                new TelaRegistrosEmprestimos().setVisible(true);
             }
         });
     }

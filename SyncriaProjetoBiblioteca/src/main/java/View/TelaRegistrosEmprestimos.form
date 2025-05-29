@@ -337,11 +337,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="iconeBilblioteca">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ALUNO\Downloads\livro_(1)_(2).png"/>
-                </Property>
-              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
@@ -584,11 +579,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="iconeRE">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\ALUNO\Downloads\registro_(1).png"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>

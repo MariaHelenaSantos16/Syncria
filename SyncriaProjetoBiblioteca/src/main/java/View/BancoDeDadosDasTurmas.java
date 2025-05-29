@@ -28,7 +28,6 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
 
         scrollPane1 = new java.awt.ScrollPane();
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
-        jScrollPane1 = new javax.swing.JScrollPane();
         painelPrincipalFundo = new javax.swing.JPanel();
         filtroStatus = new javax.swing.JComboBox<>();
         filtroTurma = new javax.swing.JComboBox<>();
@@ -38,18 +37,19 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
         cabecalhoSyncria = new javax.swing.JPanel();
         letreiroSyncria = new javax.swing.JLabel();
         iconeDoLivroSyncria = new javax.swing.JLabel();
+        iconeSair = new javax.swing.JLabel();
         iconeUsuariosBDDadosdasTurmas = new javax.swing.JLabel();
         letreiroBDdasTurmas = new javax.swing.JLabel();
-        linhaDeSeparar = new javax.swing.JSeparator();
         jScrollPane2 = new javax.swing.JScrollPane();
         tabelaBDTurmas = new javax.swing.JTable();
         menuDeNavegacao = new javax.swing.JMenuBar();
-        guiaRegistroDeEmprestimo = new javax.swing.JMenu();
-        guiaListaDeLivrosEmprestados = new javax.swing.JMenu();
-        guiaCadastroDeLivros = new javax.swing.JMenu();
-        guiaListaDeLivrosNoAcervo = new javax.swing.JMenu();
-        guiaRankingDosLeitores = new javax.swing.JMenu();
-        guiaBancoDeDadosDasTurmas = new javax.swing.JMenu();
+        guiaRegistroEmprestimo = new javax.swing.JMenu();
+        guiaListaLivrosEmprestados = new javax.swing.JMenu();
+        guiaCadastroLivros = new javax.swing.JMenu();
+        guiaListaLivrosAcervo = new javax.swing.JMenu();
+        guiaRankingLeitores = new javax.swing.JMenu();
+        guiaBancoDadosTurmas = new javax.swing.JMenu();
+        guiaGrafico = new javax.swing.JMenu();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -110,6 +110,15 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
 
         iconeDoLivroSyncria.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro (1) (2).png")); // NOI18N
 
+        iconeSair.setForeground(new java.awt.Color(0, 0, 0));
+        iconeSair.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\logout_(1).png")); // NOI18N
+        iconeSair.setText("Sair");
+        iconeSair.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconeSairMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout cabecalhoSyncriaLayout = new javax.swing.GroupLayout(cabecalhoSyncria);
         cabecalhoSyncria.setLayout(cabecalhoSyncriaLayout);
         cabecalhoSyncriaLayout.setHorizontalGroup(
@@ -119,14 +128,18 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
                 .addComponent(iconeDoLivroSyncria)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(letreiroSyncria)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(iconeSair)
+                .addGap(14, 14, 14))
         );
         cabecalhoSyncriaLayout.setVerticalGroup(
             cabecalhoSyncriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(letreiroSyncria, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(cabecalhoSyncriaLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(iconeDoLivroSyncria)
+                .addGap(14, 14, 14)
+                .addGroup(cabecalhoSyncriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(iconeDoLivroSyncria)
+                    .addComponent(iconeSair))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -135,9 +148,6 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
         letreiroBDdasTurmas.setFont(new java.awt.Font("Segoe UI", 2, 36)); // NOI18N
         letreiroBDdasTurmas.setForeground(new java.awt.Color(0, 0, 0));
         letreiroBDdasTurmas.setText("Banco de Dados das Turmas");
-
-        linhaDeSeparar.setBackground(new java.awt.Color(0, 0, 0));
-        linhaDeSeparar.setForeground(new java.awt.Color(0, 0, 0));
 
         tabelaBDTurmas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -201,7 +211,6 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
         painelPrincipalFundoLayout.setHorizontalGroup(
             painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(cabecalhoSyncria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(linhaDeSeparar)
             .addGroup(painelPrincipalFundoLayout.createSequentialGroup()
                 .addGroup(painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalFundoLayout.createSequentialGroup()
@@ -223,7 +232,7 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
                                 .addComponent(botaoDeFiltrar)
                                 .addGap(30, 30, 30)
                                 .addComponent(botaoExportar)))))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(429, Short.MAX_VALUE))
         );
         painelPrincipalFundoLayout.setVerticalGroup(
             painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,12 +242,10 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
                 .addGroup(painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalFundoLayout.createSequentialGroup()
                         .addComponent(iconeUsuariosBDDadosdasTurmas, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2))
+                        .addGap(24, 24, 24))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelPrincipalFundoLayout.createSequentialGroup()
                         .addComponent(letreiroBDdasTurmas)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(linhaDeSeparar, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(28, 28, 28)))
                 .addGroup(painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(filtroTurnos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(filtroTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -250,25 +257,68 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
                 .addContainerGap(1106, Short.MAX_VALUE))
         );
 
-        jScrollPane1.setViewportView(painelPrincipalFundo);
+        guiaRegistroEmprestimo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro.png")); // NOI18N
+        guiaRegistroEmprestimo.setText("Registro de Empréstimo |");
+        guiaRegistroEmprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                guiaRegistroEmprestimoMouseClicked(evt);
+            }
+        });
+        menuDeNavegacao.add(guiaRegistroEmprestimo);
 
-        guiaRegistroDeEmprestimo.setText("| Registro de Empréstimo |");
-        menuDeNavegacao.add(guiaRegistroDeEmprestimo);
+        guiaListaLivrosEmprestados.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro_emp._24.png")); // NOI18N
+        guiaListaLivrosEmprestados.setText("Lista de Livros Emprestados |");
+        guiaListaLivrosEmprestados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                guiaListaLivrosEmprestadosMouseClicked(evt);
+            }
+        });
+        menuDeNavegacao.add(guiaListaLivrosEmprestados);
 
-        guiaListaDeLivrosEmprestados.setText("Lista de Livros Emprestados |");
-        menuDeNavegacao.add(guiaListaDeLivrosEmprestados);
+        guiaCadastroLivros.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro (2).png")); // NOI18N
+        guiaCadastroLivros.setText("Cadastro de Livros |");
+        guiaCadastroLivros.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                guiaCadastroLivrosMouseClicked(evt);
+            }
+        });
+        menuDeNavegacao.add(guiaCadastroLivros);
 
-        guiaCadastroDeLivros.setText("Cadastro de Livros |");
-        menuDeNavegacao.add(guiaCadastroDeLivros);
+        guiaListaLivrosAcervo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\open-book.png")); // NOI18N
+        guiaListaLivrosAcervo.setText("Lista de Livros no Acervo |");
+        guiaListaLivrosAcervo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                guiaListaLivrosAcervoMouseClicked(evt);
+            }
+        });
+        menuDeNavegacao.add(guiaListaLivrosAcervo);
 
-        guiaListaDeLivrosNoAcervo.setText("Lista de Livros no Acervo |");
-        menuDeNavegacao.add(guiaListaDeLivrosNoAcervo);
+        guiaRankingLeitores.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\ranking.png")); // NOI18N
+        guiaRankingLeitores.setText("Ranking dos Leitores |");
+        guiaRankingLeitores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                guiaRankingLeitoresMouseClicked(evt);
+            }
+        });
+        menuDeNavegacao.add(guiaRankingLeitores);
 
-        guiaRankingDosLeitores.setText("Ranking dos Leitores |");
-        menuDeNavegacao.add(guiaRankingDosLeitores);
+        guiaBancoDadosTurmas.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\grupo-de-usuarios (1).png")); // NOI18N
+        guiaBancoDadosTurmas.setText("Banco de Dados das Turmas |");
+        guiaBancoDadosTurmas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                guiaBancoDadosTurmasMouseClicked(evt);
+            }
+        });
+        menuDeNavegacao.add(guiaBancoDadosTurmas);
 
-        guiaBancoDeDadosDasTurmas.setText("Banco de Dados das Turmas |");
-        menuDeNavegacao.add(guiaBancoDeDadosDasTurmas);
+        guiaGrafico.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\vinticuatro.png")); // NOI18N
+        guiaGrafico.setText("Gráfico");
+        guiaGrafico.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                guiaGraficoMouseClicked(evt);
+            }
+        });
+        menuDeNavegacao.add(guiaGrafico);
 
         setJMenuBar(menuDeNavegacao);
 
@@ -276,11 +326,14 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1661, Short.MAX_VALUE)
+            .addComponent(painelPrincipalFundo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 785, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(painelPrincipalFundo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -302,6 +355,82 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
     private void filtroTurnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filtroTurnosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_filtroTurnosActionPerformed
+
+    private void guiaBancoDadosTurmasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaBancoDadosTurmasMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guiaBancoDadosTurmasMouseClicked
+
+    private void guiaRegistroEmprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRegistroEmprestimoMouseClicked
+        // TODO add your handling code here:
+        TelaRegistrosEmprestimos tela6ParaTela1 = new TelaRegistrosEmprestimos();
+        
+        //Abrindo a tela 6 para tela 1
+        tela6ParaTela1.setVisible(true);
+        
+        //Fechando a tela
+        dispose();
+    }//GEN-LAST:event_guiaRegistroEmprestimoMouseClicked
+
+    private void guiaListaLivrosAcervoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosAcervoMouseClicked
+        // TODO add your handling code here:
+        
+        //acesso da tela 6 para tela 4
+        ListaDeLivrosNoAcervo tela6ParaTela4 = new  ListaDeLivrosNoAcervo();
+        
+        //Abrindo a tela
+        tela6ParaTela4.setVisible(true);
+        
+        //Fechando a tela
+        dispose();
+    }//GEN-LAST:event_guiaListaLivrosAcervoMouseClicked
+
+    private void guiaRankingLeitoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRankingLeitoresMouseClicked
+        // TODO add your handling code here:
+        TelaRankingDeLeitores tela6ParaTela5 = new TelaRankingDeLeitores();
+        
+        //Abrindo a tela 6 para tela 5
+        tela6ParaTela5.setVisible(true);
+        
+        //Fechando a tela
+        dispose();
+    }//GEN-LAST:event_guiaRankingLeitoresMouseClicked
+
+    private void guiaCadastroLivrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaCadastroLivrosMouseClicked
+        // TODO add your handling code here:
+        
+        //acesso da Tela 6 para tela 3
+        TelaDeCadastroDeLivros tela6paratela3 = new  TelaDeCadastroDeLivros ();
+        
+        //Abrindo a tela
+        tela6paratela3.setVisible(true);
+        
+        //Fechando a tela
+        dispose();
+    }//GEN-LAST:event_guiaCadastroLivrosMouseClicked
+
+    private void guiaListaLivrosEmprestadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosEmprestadosMouseClicked
+        // TODO add your handling code here:
+        
+        //acesso da Tela 6 para tela 2
+        ListaDeLivrosEmprestados tela6paratela2 = new  ListaDeLivrosEmprestados ();
+        
+        //Abrindo a tela
+        tela6paratela2.setVisible(true);
+        
+        //Fechando a tela 
+        dispose();
+    }//GEN-LAST:event_guiaListaLivrosEmprestadosMouseClicked
+
+    private void guiaGraficoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaGraficoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guiaGraficoMouseClicked
+
+    private void iconeSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconeSairMouseClicked
+        // TODO add your handling code here:
+        
+        //Processo de fechar o Aplicativo
+        dispose();
+    }//GEN-LAST:event_iconeSairMouseClicked
 
     /**
      * @param args the command line arguments
@@ -348,20 +477,20 @@ public class BancoDeDadosDasTurmas extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> filtroStatus;
     private javax.swing.JComboBox<String> filtroTurma;
     private javax.swing.JComboBox<String> filtroTurnos;
-    private javax.swing.JMenu guiaBancoDeDadosDasTurmas;
-    private javax.swing.JMenu guiaCadastroDeLivros;
-    private javax.swing.JMenu guiaListaDeLivrosEmprestados;
-    private javax.swing.JMenu guiaListaDeLivrosNoAcervo;
-    private javax.swing.JMenu guiaRankingDosLeitores;
-    private javax.swing.JMenu guiaRegistroDeEmprestimo;
+    private javax.swing.JMenu guiaBancoDadosTurmas;
+    private javax.swing.JMenu guiaCadastroLivros;
+    private javax.swing.JMenu guiaGrafico;
+    private javax.swing.JMenu guiaListaLivrosAcervo;
+    private javax.swing.JMenu guiaListaLivrosEmprestados;
+    private javax.swing.JMenu guiaRankingLeitores;
+    private javax.swing.JMenu guiaRegistroEmprestimo;
     private javax.swing.JLabel iconeDoLivroSyncria;
+    private javax.swing.JLabel iconeSair;
     private javax.swing.JLabel iconeUsuariosBDDadosdasTurmas;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel letreiroBDdasTurmas;
     private javax.swing.JLabel letreiroSyncria;
-    private javax.swing.JSeparator linhaDeSeparar;
     private javax.swing.JMenuBar menuDeNavegacao;
     private javax.swing.JPanel painelPrincipalFundo;
     private java.awt.ScrollPane scrollPane1;

@@ -36,18 +36,19 @@ public class TelaRankingDeLeitores extends javax.swing.JFrame {
         cabecalhoSyncria = new javax.swing.JPanel();
         letreiroSyncria = new javax.swing.JLabel();
         iconeDoLivroSyncria = new javax.swing.JLabel();
-        iconeUsuariosBDDadosdasTurmas = new javax.swing.JLabel();
-        letreiroBDdasTurmas = new javax.swing.JLabel();
-        linhaDeSeparar = new javax.swing.JSeparator();
+        iconeSair = new javax.swing.JLabel();
+        iconeRankingLeitores = new javax.swing.JLabel();
+        letreiroRankingLeitores = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tabelaBDTurmas = new javax.swing.JTable();
+        tabelaRankingLeitores = new javax.swing.JTable();
         menuDeNavegacao = new javax.swing.JMenuBar();
-        guiaRegistroDeEmprestimo = new javax.swing.JMenu();
-        guiaListaDeLivrosEmprestados = new javax.swing.JMenu();
-        guiaCadastroDeLivros = new javax.swing.JMenu();
-        guiaListaDeLivrosNoAcervo = new javax.swing.JMenu();
-        guiaRankingDosLeitores = new javax.swing.JMenu();
-        guiaBancoDeDadosDasTurmas = new javax.swing.JMenu();
+        guiaRegistroEmprestimo = new javax.swing.JMenu();
+        guiaListaLivrosEmprestados = new javax.swing.JMenu();
+        guiaCadastroLivros = new javax.swing.JMenu();
+        guiaListaLivrosAcervo = new javax.swing.JMenu();
+        guiaRankingLeitores = new javax.swing.JMenu();
+        guiaBancoDadosTurmas = new javax.swing.JMenu();
+        guiaGrafico = new javax.swing.JMenu();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -99,6 +100,15 @@ public class TelaRankingDeLeitores extends javax.swing.JFrame {
 
         iconeDoLivroSyncria.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro (1) (2).png")); // NOI18N
 
+        iconeSair.setForeground(new java.awt.Color(0, 0, 0));
+        iconeSair.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\logout_(1).png")); // NOI18N
+        iconeSair.setText("Sair");
+        iconeSair.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconeSairMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout cabecalhoSyncriaLayout = new javax.swing.GroupLayout(cabecalhoSyncria);
         cabecalhoSyncria.setLayout(cabecalhoSyncriaLayout);
         cabecalhoSyncriaLayout.setHorizontalGroup(
@@ -108,27 +118,31 @@ public class TelaRankingDeLeitores extends javax.swing.JFrame {
                 .addComponent(iconeDoLivroSyncria)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(letreiroSyncria)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(iconeSair)
+                .addGap(14, 14, 14))
         );
         cabecalhoSyncriaLayout.setVerticalGroup(
             cabecalhoSyncriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(letreiroSyncria, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(cabecalhoSyncriaLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(iconeDoLivroSyncria)
+                .addGroup(cabecalhoSyncriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cabecalhoSyncriaLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(iconeDoLivroSyncria))
+                    .addGroup(cabecalhoSyncriaLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(iconeSair)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        iconeUsuariosBDDadosdasTurmas.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\ranking (2).png")); // NOI18N
+        iconeRankingLeitores.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\ranking (2).png")); // NOI18N
 
-        letreiroBDdasTurmas.setFont(new java.awt.Font("Segoe UI", 2, 36)); // NOI18N
-        letreiroBDdasTurmas.setForeground(new java.awt.Color(0, 0, 0));
-        letreiroBDdasTurmas.setText("Ranking de Leitores");
+        letreiroRankingLeitores.setFont(new java.awt.Font("Segoe UI", 2, 36)); // NOI18N
+        letreiroRankingLeitores.setForeground(new java.awt.Color(0, 0, 0));
+        letreiroRankingLeitores.setText("Ranking de Leitores");
 
-        linhaDeSeparar.setBackground(new java.awt.Color(0, 0, 0));
-        linhaDeSeparar.setForeground(new java.awt.Color(0, 0, 0));
-
-        tabelaBDTurmas.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaRankingLeitores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -183,38 +197,36 @@ public class TelaRankingDeLeitores extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tabelaBDTurmas.setToolTipText("");
-        jScrollPane2.setViewportView(tabelaBDTurmas);
+        tabelaRankingLeitores.setToolTipText("");
+        jScrollPane2.setViewportView(tabelaRankingLeitores);
 
         javax.swing.GroupLayout painelPrincipalFundoLayout = new javax.swing.GroupLayout(painelPrincipalFundo);
         painelPrincipalFundo.setLayout(painelPrincipalFundoLayout);
         painelPrincipalFundoLayout.setHorizontalGroup(
             painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(cabecalhoSyncria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(linhaDeSeparar)
             .addGroup(painelPrincipalFundoLayout.createSequentialGroup()
                 .addGroup(painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalFundoLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(iconeRankingLeitores, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(letreiroRankingLeitores, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelPrincipalFundoLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
                         .addGroup(painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelPrincipalFundoLayout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addComponent(iconeUsuariosBDDadosdasTurmas, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(letreiroBDdasTurmas, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(6, 6, 6)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1591, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(painelPrincipalFundoLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
                                 .addComponent(filtroTurnos, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(30, 30, 30)
                                 .addComponent(filtroTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(botaoDeFiltrar)
-                                .addGap(30, 30, 30)
-                                .addComponent(botaoExportar)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelPrincipalFundoLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1591, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                                .addGap(18, 18, 18)
+                                .addComponent(botaoExportar)))))
+                .addContainerGap(288, Short.MAX_VALUE))
         );
         painelPrincipalFundoLayout.setVerticalGroup(
             painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,70 +235,79 @@ public class TelaRankingDeLeitores extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalFundoLayout.createSequentialGroup()
-                        .addComponent(iconeUsuariosBDDadosdasTurmas, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2))
+                        .addComponent(iconeRankingLeitores, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelPrincipalFundoLayout.createSequentialGroup()
-                        .addComponent(letreiroBDdasTurmas)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(linhaDeSeparar, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(letreiroRankingLeitores)
+                        .addGap(28, 28, 28)))
+                .addGroup(painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botaoExportar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(filtroTurnos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(filtroTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoDeFiltrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(painelPrincipalFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(filtroTurnos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(filtroTurma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoDeFiltrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botaoExportar))
-                .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1114, Short.MAX_VALUE))
+                .addGap(1120, 1120, 1120))
         );
 
-        guiaRegistroDeEmprestimo.setText("| Registro de Empréstimo |");
-        guiaRegistroDeEmprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaRegistroEmprestimo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro.png")); // NOI18N
+        guiaRegistroEmprestimo.setText("Registro de Empréstimo |");
+        guiaRegistroEmprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                guiaRegistroDeEmprestimoMouseClicked(evt);
+                guiaRegistroEmprestimoMouseClicked(evt);
             }
         });
-        menuDeNavegacao.add(guiaRegistroDeEmprestimo);
+        menuDeNavegacao.add(guiaRegistroEmprestimo);
 
-        guiaListaDeLivrosEmprestados.setText("Lista de Livros Emprestados |");
-        guiaListaDeLivrosEmprestados.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaListaLivrosEmprestados.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro_emp._24.png")); // NOI18N
+        guiaListaLivrosEmprestados.setText("Lista de Livros Emprestados |");
+        guiaListaLivrosEmprestados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                guiaListaDeLivrosEmprestadosMouseClicked(evt);
+                guiaListaLivrosEmprestadosMouseClicked(evt);
             }
         });
-        menuDeNavegacao.add(guiaListaDeLivrosEmprestados);
+        menuDeNavegacao.add(guiaListaLivrosEmprestados);
 
-        guiaCadastroDeLivros.setText("Cadastro de Livros |");
-        guiaCadastroDeLivros.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaCadastroLivros.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro (2).png")); // NOI18N
+        guiaCadastroLivros.setText("Cadastro de Livros |");
+        guiaCadastroLivros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                guiaCadastroDeLivrosMouseClicked(evt);
+                guiaCadastroLivrosMouseClicked(evt);
             }
         });
-        menuDeNavegacao.add(guiaCadastroDeLivros);
+        menuDeNavegacao.add(guiaCadastroLivros);
 
-        guiaListaDeLivrosNoAcervo.setText("Lista de Livros no Acervo |");
-        guiaListaDeLivrosNoAcervo.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaListaLivrosAcervo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\open-book.png")); // NOI18N
+        guiaListaLivrosAcervo.setText("Lista de Livros no Acervo |");
+        guiaListaLivrosAcervo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                guiaListaDeLivrosNoAcervoMouseClicked(evt);
+                guiaListaLivrosAcervoMouseClicked(evt);
             }
         });
-        menuDeNavegacao.add(guiaListaDeLivrosNoAcervo);
+        menuDeNavegacao.add(guiaListaLivrosAcervo);
 
-        guiaRankingDosLeitores.setText("Ranking dos Leitores |");
-        guiaRankingDosLeitores.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaRankingLeitores.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\ranking.png")); // NOI18N
+        guiaRankingLeitores.setText("Ranking dos Leitores |");
+        guiaRankingLeitores.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                guiaRankingDosLeitoresMouseClicked(evt);
+                guiaRankingLeitoresMouseClicked(evt);
             }
         });
-        menuDeNavegacao.add(guiaRankingDosLeitores);
+        menuDeNavegacao.add(guiaRankingLeitores);
 
-        guiaBancoDeDadosDasTurmas.setText("Banco de Dados das Turmas |");
-        guiaBancoDeDadosDasTurmas.addMouseListener(new java.awt.event.MouseAdapter() {
+        guiaBancoDadosTurmas.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\grupo-de-usuarios (1).png")); // NOI18N
+        guiaBancoDadosTurmas.setText("Banco de Dados das Turmas |");
+        guiaBancoDadosTurmas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                guiaBancoDeDadosDasTurmasMouseClicked(evt);
+                guiaBancoDadosTurmasMouseClicked(evt);
             }
         });
-        menuDeNavegacao.add(guiaBancoDeDadosDasTurmas);
+        menuDeNavegacao.add(guiaBancoDadosTurmas);
+
+        guiaGrafico.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\vinticuatro.png")); // NOI18N
+        guiaGrafico.setText("Gráfico");
+        menuDeNavegacao.add(guiaGrafico);
 
         setJMenuBar(menuDeNavegacao);
 
@@ -299,9 +320,9 @@ public class TelaRankingDeLeitores extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 4, Short.MAX_VALUE)
                 .addComponent(painelPrincipalFundo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         pack();
@@ -320,63 +341,78 @@ public class TelaRankingDeLeitores extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_filtroTurnosActionPerformed
 
-    private void guiaBancoDeDadosDasTurmasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaBancoDeDadosDasTurmasMouseClicked
+    private void guiaBancoDadosTurmasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaBancoDadosTurmasMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_guiaBancoDeDadosDasTurmasMouseClicked
-
-    private void guiaRegistroDeEmprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRegistroDeEmprestimoMouseClicked
-        // TODO add your handling code here:
-        TelaRegistrosEmprestimos tela6ParaTela1 = new TelaRegistrosEmprestimos();
-        
-        //Abrindo a tela 6 para tela 1
-        tela6ParaTela1.setVisible(true);
-        
-        //Fechando a tela de login
-        dispose();
-    }//GEN-LAST:event_guiaRegistroDeEmprestimoMouseClicked
-
-    private void guiaListaDeLivrosNoAcervoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaDeLivrosNoAcervoMouseClicked
-        // TODO add your handling code here:
-        
-        //acesso da tela 6 para tela 4
-        ListaDeLivrosNoAcervo tela6ParaTela4 = new  ListaDeLivrosNoAcervo();
+         //acesso da Tela 5 para tela 6
+        BancoDeDadosDasTurmas tela5paratela6 = new  BancoDeDadosDasTurmas ();
         
         //Abrindo a tela
-        tela6ParaTela4.setVisible(true);
+        tela5paratela6.setVisible(true);
         
-        //Fechando a tela de login
+        //Fechando a tela
         dispose();
-    }//GEN-LAST:event_guiaListaDeLivrosNoAcervoMouseClicked
+    }//GEN-LAST:event_guiaBancoDadosTurmasMouseClicked
 
-    private void guiaRankingDosLeitoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRankingDosLeitoresMouseClicked
+    private void guiaRegistroEmprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRegistroEmprestimoMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_guiaRankingDosLeitoresMouseClicked
+        TelaRegistrosEmprestimos tela5ParaTela1 = new TelaRegistrosEmprestimos();
+        
+        //Abrindo a tela 5 para tela 1
+        tela5ParaTela1.setVisible(true);
+        
+        //Fechando a tela
+        dispose();
+    }//GEN-LAST:event_guiaRegistroEmprestimoMouseClicked
 
-    private void guiaCadastroDeLivrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaCadastroDeLivrosMouseClicked
+    private void guiaListaLivrosAcervoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosAcervoMouseClicked
         // TODO add your handling code here:
         
-        //acesso da Tela 6 para tela 3
-        TelaDeCadastroDeLivros tela6paratela3 = new  TelaDeCadastroDeLivros ();
+        //acesso da tela 5 para tela 4
+        ListaDeLivrosNoAcervo tela5ParaTela4 = new  ListaDeLivrosNoAcervo();
         
         //Abrindo a tela
-        tela6paratela3.setVisible(true);
+        tela5ParaTela4.setVisible(true);
         
-        //Fechando a tela de login
+        //Fechando a tela
         dispose();
-    }//GEN-LAST:event_guiaCadastroDeLivrosMouseClicked
+    }//GEN-LAST:event_guiaListaLivrosAcervoMouseClicked
 
-    private void guiaListaDeLivrosEmprestadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaDeLivrosEmprestadosMouseClicked
+    private void guiaRankingLeitoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaRankingLeitoresMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guiaRankingLeitoresMouseClicked
+
+    private void guiaCadastroLivrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaCadastroLivrosMouseClicked
         // TODO add your handling code here:
         
-        //acesso da Tela 6 para tela 2
-        ListaDeLivrosEmprestados tela6paratela2 = new  ListaDeLivrosEmprestados ();
+        //acesso da Tela 5 para tela 3
+        TelaDeCadastroDeLivros tela5paratela3 = new  TelaDeCadastroDeLivros ();
         
         //Abrindo a tela
-        tela6paratela2.setVisible(true);
+        tela5paratela3.setVisible(true);
         
-        //Fechando a tela de login
+        //Fechando a tela
         dispose();
-    }//GEN-LAST:event_guiaListaDeLivrosEmprestadosMouseClicked
+    }//GEN-LAST:event_guiaCadastroLivrosMouseClicked
+
+    private void guiaListaLivrosEmprestadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guiaListaLivrosEmprestadosMouseClicked
+        // TODO add your handling code here:
+        
+        //acesso da Tela 5 para tela 2
+        ListaDeLivrosEmprestados tela5paratela2 = new  ListaDeLivrosEmprestados ();
+        
+        //Abrindo a tela
+        tela5paratela2.setVisible(true);
+        
+        //Fechando a tela
+        dispose();
+    }//GEN-LAST:event_guiaListaLivrosEmprestadosMouseClicked
+
+    private void iconeSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconeSairMouseClicked
+        // TODO add your handling code here:
+        
+        //Processo de fechar o Aplicativo
+        dispose();
+    }//GEN-LAST:event_iconeSairMouseClicked
 
     /**
      * @param args the command line arguments
@@ -426,22 +462,23 @@ public class TelaRankingDeLeitores extends javax.swing.JFrame {
     private javax.swing.JPanel cabecalhoSyncria;
     private javax.swing.JComboBox<String> filtroTurma;
     private javax.swing.JComboBox<String> filtroTurnos;
-    private javax.swing.JMenu guiaBancoDeDadosDasTurmas;
-    private javax.swing.JMenu guiaCadastroDeLivros;
-    private javax.swing.JMenu guiaListaDeLivrosEmprestados;
-    private javax.swing.JMenu guiaListaDeLivrosNoAcervo;
-    private javax.swing.JMenu guiaRankingDosLeitores;
-    private javax.swing.JMenu guiaRegistroDeEmprestimo;
+    private javax.swing.JMenu guiaBancoDadosTurmas;
+    private javax.swing.JMenu guiaCadastroLivros;
+    private javax.swing.JMenu guiaGrafico;
+    private javax.swing.JMenu guiaListaLivrosAcervo;
+    private javax.swing.JMenu guiaListaLivrosEmprestados;
+    private javax.swing.JMenu guiaRankingLeitores;
+    private javax.swing.JMenu guiaRegistroEmprestimo;
     private javax.swing.JLabel iconeDoLivroSyncria;
-    private javax.swing.JLabel iconeUsuariosBDDadosdasTurmas;
+    private javax.swing.JLabel iconeRankingLeitores;
+    private javax.swing.JLabel iconeSair;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel letreiroBDdasTurmas;
+    private javax.swing.JLabel letreiroRankingLeitores;
     private javax.swing.JLabel letreiroSyncria;
-    private javax.swing.JSeparator linhaDeSeparar;
     private javax.swing.JMenuBar menuDeNavegacao;
     private javax.swing.JPanel painelPrincipalFundo;
     private java.awt.ScrollPane scrollPane1;
-    private javax.swing.JTable tabelaBDTurmas;
+    private javax.swing.JTable tabelaRankingLeitores;
     // End of variables declaration//GEN-END:variables
 }

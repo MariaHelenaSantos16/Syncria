@@ -140,7 +140,7 @@ public class Telalogin extends javax.swing.JFrame {
     private void butaoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butaoEntrarActionPerformed
         // TODO add your handling code here:
         //criando um objeto da tela
-        TelaRegistrosImprestimos telaPrincipal = new TelaRegistrosImprestimos();
+        TelaRegistrosEmprestimos telaPrincipal = new TelaRegistrosEmprestimos();
         //abrindo a tela de Registros de Imprestimos
         telaPrincipal.setVisible(true);
         
