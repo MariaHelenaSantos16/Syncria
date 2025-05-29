@@ -4,6 +4,8 @@
  */
 package View;
 
+import java.util.HashSet;
+
 /**
  *
  * @author ALUNO
@@ -26,26 +28,423 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
+        principalPainel = new javax.swing.JPanel();
+        escreva1 = new javax.swing.JLabel();
+        livroI = new javax.swing.JLabel();
+        penalBranco = new javax.swing.JPanel();
+        escrevaLista = new javax.swing.JLabel();
+        simboloPonto = new javax.swing.JLabel();
+        filtrar = new javax.swing.JComboBox<>();
+        tabelaRolagem = new javax.swing.JScrollPane();
+        priTabela = new javax.swing.JTable();
+        botao1 = new javax.swing.JButton();
+        barraMenu = new javax.swing.JMenuBar();
+        priMenu = new javax.swing.JMenu();
+        segMenu = new javax.swing.JMenu();
+        terMenu = new javax.swing.JMenu();
+        quaMenu = new javax.swing.JMenu();
+        sexMenu = new javax.swing.JMenu();
+        setMenu = new javax.swing.JMenu();
+        iconeGrafico = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Lista de Livros Emprestados");
+
+        principalPainel.setBackground(new java.awt.Color(208, 224, 235));
+
+        escreva1.setBackground(new java.awt.Color(0, 0, 0));
+        escreva1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        escreva1.setForeground(new java.awt.Color(0, 0, 0));
+        escreva1.setText("Biblioteca Syncria");
+
+        livroI.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro_(1)_(2).png")); // NOI18N
+
+        penalBranco.setBackground(new java.awt.Color(73, 112, 138));
+
+        escrevaLista.setFont(new java.awt.Font("Segoe UI", 2, 36)); // NOI18N
+        escrevaLista.setForeground(new java.awt.Color(0, 0, 0));
+        escrevaLista.setText("Lista de Livros Emprestados");
+
+        simboloPonto.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro emp. 64.png")); // NOI18N
+
+        filtrar.setBackground(new java.awt.Color(255, 255, 255));
+        filtrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        filtrar.setForeground(new java.awt.Color(0, 0, 0));
+        filtrar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Filtrar", "Ordem Alfabética", "Número de Códigos", "Data", "Turma", "Bimestre" }));
+        filtrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filtrarActionPerformed(evt);
+            }
+        });
+
+        priTabela.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Turno", "Código", "Alunos", "Nome do Livro", "Registro", "Data de Devolução", "Bimestre"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tabelaRolagem.setViewportView(priTabela);
+
+        botao1.setBackground(new java.awt.Color(255, 255, 255));
+        botao1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botao1.setForeground(new java.awt.Color(0, 0, 0));
+        botao1.setText("Exportar Lista");
+        botao1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botao1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout penalBrancoLayout = new javax.swing.GroupLayout(penalBranco);
+        penalBranco.setLayout(penalBrancoLayout);
+        penalBrancoLayout.setHorizontalGroup(
+            penalBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(penalBrancoLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(filtrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(penalBrancoLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(simboloPonto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(escrevaLista)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botao1)
+                .addGap(37, 37, 37))
+            .addComponent(tabelaRolagem, javax.swing.GroupLayout.DEFAULT_SIZE, 1310, Short.MAX_VALUE)
+        );
+        penalBrancoLayout.setVerticalGroup(
+            penalBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(penalBrancoLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addGroup(penalBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(penalBrancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(botao1)
+                        .addComponent(escrevaLista))
+                    .addComponent(simboloPonto, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(filtrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(tabelaRolagem, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout principalPainelLayout = new javax.swing.GroupLayout(principalPainel);
+        principalPainel.setLayout(principalPainelLayout);
+        principalPainelLayout.setHorizontalGroup(
+            principalPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(principalPainelLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(livroI)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(escreva1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(principalPainelLayout.createSequentialGroup()
+                .addComponent(penalBranco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        principalPainelLayout.setVerticalGroup(
+            principalPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(principalPainelLayout.createSequentialGroup()
+                .addGroup(principalPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(principalPainelLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(livroI, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(escreva1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(penalBranco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        priMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro.png")); // NOI18N
+        priMenu.setText(" Registro de Empréstimo |");
+        priMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                priMenuMouseClicked(evt);
+            }
+        });
+        barraMenu.add(priMenu);
+
+        segMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro emp. 24.png")); // NOI18N
+        segMenu.setText("Lista de Livros Emprestados |");
+        segMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                segMenuMouseClicked(evt);
+            }
+        });
+        barraMenu.add(segMenu);
+
+        terMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\cadastro de livros 24.png")); // NOI18N
+        terMenu.setText("Cadastro de Livros |");
+        terMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                terMenuMouseClicked(evt);
+            }
+        });
+        barraMenu.add(terMenu);
+
+        quaMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\open-book.png")); // NOI18N
+        quaMenu.setText("Lista de Livros no Acervo |");
+        quaMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quaMenuMouseClicked(evt);
+            }
+        });
+        barraMenu.add(quaMenu);
+
+        sexMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\ranking.png")); // NOI18N
+        sexMenu.setText("Ranking dos Leitores |");
+        sexMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sexMenuMouseClicked(evt);
+            }
+        });
+        barraMenu.add(sexMenu);
+
+        setMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\grupo-de-usuarios_(1).png")); // NOI18N
+        setMenu.setText("Banco de Dados das Turmas |");
+        setMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                setMenuMouseClicked(evt);
+            }
+        });
+        barraMenu.add(setMenu);
+
+        iconeGrafico.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\line-chart.png")); // NOI18N
+        barraMenu.add(iconeGrafico);
+
+        setJMenuBar(barraMenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 446, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(principalPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 410, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(principalPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
+    private void botao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao1ActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_botao1ActionPerformed
+
+    private void filtrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filtrarActionPerformed
+        // TODO add your handling code here:
+        
+  
+    }//GEN-LAST:event_filtrarActionPerformed
+
+    
+    private void segMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_segMenuMouseClicked
+        // TODO add your handling code here:
+        
+       
+    }//GEN-LAST:event_segMenuMouseClicked
+
+    private void setMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_setMenuMouseClicked
+        // TODO add your handling code here:
+          
+        //criar objeto da classe 
+        BancoDeDadosDasTurmas bancoDadosTurma = new BancoDeDadosDasTurmas();
+               // abrindo a tela
+                bancoDadosTurma.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_setMenuMouseClicked
+
+    private void quaMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quaMenuMouseClicked
+
+        // TODO add your handling code here:
+        
+        //criar objeto da classe 
+        ListaDeLivrosNoAcervo livrosAcervo = new ListaDeLivrosNoAcervo();
+               // abrindo a tela
+                livrosAcervo.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+        
+    }//GEN-LAST:event_quaMenuMouseClicked
+
+    private void priMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_priMenuMouseClicked
+        // TODO add your handling code here:
+        
+        //criar objeto da classe 
+        TelaRegistrosEmprestimos registroEmprestimo = new TelaRegistrosEmprestimos();
+               // abrindo a tela
+                registroEmprestimo.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+            
+            
+    }//GEN-LAST:event_priMenuMouseClicked
+
+    private void terMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_terMenuMouseClicked
+        // TODO add your handling code here
+        
+                //criar objeto da classe 
+        Telaldecadastrodelivros cadastroLivro = new Telaldecadastrodelivros();
+               // abrindo a tela
+                cadastroLivro.setVisible(true);
+        // fechar tela de login
+                    dispose();
+            ;
+    }//GEN-LAST:event_terMenuMouseClicked
+
+    private void sexMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sexMenuMouseClicked
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_sexMenuMouseClicked
+
+    
+    
+    
+    
+    
+    
+    /**  * 
+@param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -80,6 +479,23 @@ public class ListaDeLivrosEmprestados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenuBar barraMenu;
+    private javax.swing.JButton botao1;
+    private javax.swing.JLabel escreva1;
+    private javax.swing.JLabel escrevaLista;
+    private javax.swing.JComboBox<String> filtrar;
+    private javax.swing.JMenu iconeGrafico;
+    private javax.swing.JLabel livroI;
+    private javax.swing.JPanel penalBranco;
+    private javax.swing.JMenu priMenu;
+    private javax.swing.JTable priTabela;
+    private javax.swing.JPanel principalPainel;
+    private javax.swing.JMenu quaMenu;
+    private javax.swing.JMenu segMenu;
+    private javax.swing.JMenu setMenu;
+    private javax.swing.JMenu sexMenu;
+    private javax.swing.JLabel simboloPonto;
+    private javax.swing.JScrollPane tabelaRolagem;
+    private javax.swing.JMenu terMenu;
     // End of variables declaration//GEN-END:variables
 }

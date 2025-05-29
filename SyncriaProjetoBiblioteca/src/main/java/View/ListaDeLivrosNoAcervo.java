@@ -43,6 +43,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         menuQuatro = new javax.swing.JMenu();
         menuSeis = new javax.swing.JMenu();
         menuSete = new javax.swing.JMenu();
+        iconeGráficos = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista de Livros no Acervo");
@@ -92,7 +93,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        listihna.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\clipboard.png")); // NOI18N
+        listihna.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\open 64.png")); // NOI18N
 
         escrevaLista.setBackground(new java.awt.Color(255, 255, 255));
         escrevaLista.setFont(new java.awt.Font("Segoe UI", 2, 36)); // NOI18N
@@ -109,6 +110,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
             }
         });
 
+        tabelaRegistro.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         tabelaRegistro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
@@ -867,7 +869,8 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
                 .addGap(0, 0, 0))
         );
 
-        menuUm.setText("| Registro de Empréstimo |");
+        menuUm.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\registro.png")); // NOI18N
+        menuUm.setText("Registro de Empréstimo |");
         menuUm.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 menuUmMouseClicked(evt);
@@ -875,6 +878,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         });
         jMenuBar1.add(menuUm);
 
+        menuDois.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\livro emp. 24.png")); // NOI18N
         menuDois.setText("Lista de Livros Emprestados |");
         menuDois.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -883,6 +887,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         });
         jMenuBar1.add(menuDois);
 
+        menuTres.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\cadastro de livros 24.png")); // NOI18N
         menuTres.setText("Cadastro de Livros |");
         menuTres.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -891,9 +896,11 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         });
         jMenuBar1.add(menuTres);
 
+        menuQuatro.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\open-book.png")); // NOI18N
         menuQuatro.setText("Lista de Livros no Acervo |");
         jMenuBar1.add(menuQuatro);
 
+        menuSeis.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\ranking.png")); // NOI18N
         menuSeis.setText("Ranking dos Leitores |");
         menuSeis.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -902,6 +909,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
         });
         jMenuBar1.add(menuSeis);
 
+        menuSete.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\grupo-de-usuarios_(1).png")); // NOI18N
         menuSete.setText("Banco de Dados das Turmas |");
         menuSete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -909,6 +917,9 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(menuSete);
+
+        iconeGráficos.setIcon(new javax.swing.ImageIcon("C:\\Users\\ALUNO\\Downloads\\line-chart.png")); // NOI18N
+        jMenuBar1.add(iconeGráficos);
 
         setJMenuBar(jMenuBar1);
 
@@ -1034,6 +1045,7 @@ public class ListaDeLivrosNoAcervo extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboFiltro;
     private javax.swing.JLabel escreva1;
     private javax.swing.JLabel escrevaLista;
+    private javax.swing.JMenu iconeGráficos;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel listihna;

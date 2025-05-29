@@ -6,7 +6,10 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="menuUm">
           <Properties>
-            <Property name="text" type="java.lang.String" value="| Registro de Empr&#xe9;stimo |"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Downloads\registro.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Registro de Empr&#xe9;stimo |"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="menuUmMouseClicked"/>
@@ -14,6 +17,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="menuDois">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Downloads\livro emp. 24.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Lista de Livros Emprestados |"/>
           </Properties>
           <Events>
@@ -22,6 +28,9 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="menuTres">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Downloads\cadastro de livros 24.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Cadastro de Livros |"/>
           </Properties>
           <Events>
@@ -30,11 +39,17 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="menuQuatro">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Downloads\open-book.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Lista de Livros no Acervo |"/>
           </Properties>
         </Menu>
         <Menu class="javax.swing.JMenu" name="menuSeis">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Downloads\ranking.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Ranking dos Leitores |"/>
           </Properties>
           <Events>
@@ -43,11 +58,21 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="menuSete">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Downloads\grupo-de-usuarios_(1).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Banco de Dados das Turmas |"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="menuSeteMouseClicked"/>
           </Events>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="iconeGr&#xe1;ficos">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\ALUNO\Downloads\line-chart.png"/>
+            </Property>
+          </Properties>
         </Menu>
       </SubComponents>
     </Menu>
@@ -232,7 +257,7 @@
         <Component class="javax.swing.JLabel" name="listihna">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\ALUNO\Downloads\clipboard.png"/>
+              <Image iconType="2" name="C:\Users\ALUNO\Downloads\open 64.png"/>
             </Property>
           </Properties>
         </Component>
@@ -296,6 +321,9 @@
           <SubComponents>
             <Component class="javax.swing.JTable" name="tabelaRegistro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="12" style="3"/>
+                </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="14" rowCount="700">
                     <Column editable="false" title="T&#xed;tulo da Obra" type="java.lang.Object"/>
