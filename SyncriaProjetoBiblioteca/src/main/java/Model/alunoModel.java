@@ -17,7 +17,7 @@ private String bimestreAluno;
  private int quantidadeDeLivrosEmprestados;
  private int quantidadeDeLivrosDevolvidos;
  private String livrosAlugadosPeloAluno;
-    
+
     
     
   

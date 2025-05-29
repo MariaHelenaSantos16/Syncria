@@ -4,7 +4,7 @@
  */
 package View;
 
-import Model.FuncionariosModel;
+import Model.UsuarioModel;
 
 /**
  *
@@ -34,9 +34,10 @@ public class TelaCadastro extends javax.swing.JFrame {
         usuariocadastro = new javax.swing.JTextField();
         senhaCadastro = new javax.swing.JLabel();
         senhaCasatro1 = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
         butaoCadastrar = new javax.swing.JButton();
         usuarioCadastro = new javax.swing.JLabel();
+        usuarioCPF = new javax.swing.JLabel();
+        usuarioCPFDdigitado = new javax.swing.JFormattedTextField();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -89,67 +90,76 @@ public class TelaCadastro extends javax.swing.JFrame {
         usuarioCadastro.setBackground(new java.awt.Color(0, 0, 0));
         usuarioCadastro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         usuarioCadastro.setForeground(new java.awt.Color(0, 0, 0));
-        usuarioCadastro.setText("Usuário:");
+        usuarioCadastro.setText("Nome:");
+
+        usuarioCPF.setBackground(new java.awt.Color(0, 0, 0));
+        usuarioCPF.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        usuarioCPF.setForeground(new java.awt.Color(0, 0, 0));
+        usuarioCPF.setText("CPF:");
+
+        usuarioCPFDdigitado.setBackground(new java.awt.Color(255, 255, 255));
+        usuarioCPFDdigitado.setForeground(new java.awt.Color(0, 0, 0));
+        try {
+            usuarioCPFDdigitado.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
 
         javax.swing.GroupLayout tela2cadastroLayout = new javax.swing.GroupLayout(tela2cadastro);
         tela2cadastro.setLayout(tela2cadastroLayout);
         tela2cadastroLayout.setHorizontalGroup(
             tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tela2cadastroLayout.createSequentialGroup()
+                .addContainerGap(152, Short.MAX_VALUE)
                 .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(senhaCasatro1, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(tela2cadastroLayout.createSequentialGroup()
-                            .addGap(107, 107, 107)
-                            .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(senhaCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela2cadastroLayout.createSequentialGroup()
-                                        .addComponent(usuarioCadastro)
-                                        .addGap(118, 118, 118)
-                                        .addComponent(jLabel1)
-                                        .addGap(32, 32, 32)))
-                                .addComponent(usuariocadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(tela2cadastroLayout.createSequentialGroup()
-                        .addGap(191, 191, 191)
-                        .addComponent(butaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(132, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela2cadastroLayout.createSequentialGroup()
+                        .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(senhaCasatro1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(usuarioCadastro)
+                            .addComponent(usuariocadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(usuarioCPF)
+                            .addComponent(usuarioCPFDdigitado, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(senhaCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(142, 142, 142))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela2cadastroLayout.createSequentialGroup()
+                        .addComponent(butaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(244, 244, 244))))
         );
         tela2cadastroLayout.setVerticalGroup(
             tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tela2cadastroLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(tela2cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela2cadastroLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28))
-                    .addComponent(usuarioCadastro, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(35, Short.MAX_VALUE)
+                .addComponent(usuarioCadastro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(usuariocadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(usuarioCPF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(usuarioCPFDdigitado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(senhaCadastro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(senhaCasatro1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addComponent(senhaCasatro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(butaoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(174, 174, 174))
+                .addGap(48, 48, 48))
         );
 
         javax.swing.GroupLayout tela1CadastroLayout = new javax.swing.GroupLayout(tela1Cadastro);
         tela1Cadastro.setLayout(tela1CadastroLayout);
         tela1CadastroLayout.setHorizontalGroup(
             tela1CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela1CadastroLayout.createSequentialGroup()
-                .addContainerGap(191, Short.MAX_VALUE)
+            .addGroup(tela1CadastroLayout.createSequentialGroup()
+                .addGap(157, 157, 157)
                 .addComponent(tela2cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(188, 188, 188))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         tela1CadastroLayout.setVerticalGroup(
             tela1CadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tela1CadastroLayout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(tela2cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(85, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tela1CadastroLayout.createSequentialGroup()
+                .addContainerGap(94, Short.MAX_VALUE)
+                .addComponent(tela2cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -175,11 +185,11 @@ public class TelaCadastro extends javax.swing.JFrame {
         
         //criar um objeto da classe
         
-        FuncionariosModel funcionario = new FuncionariosModel();
+        UsuarioModel usuario = new UsuarioModel();
         //cadastrar os dados dentro da classe FuncionariosModel
-        funcionario.setNome(usuariocadastro.getText());
+        usuario.setNome(usuariocadastro.getText());
         //capturar dados do campo Password Fild
-        funcionario.setSenha( new String(senhaCasatro1.getPassword()));
+        usuario.setSenha( new String(senhaCasatro1.getPassword()));
         
         
     }//GEN-LAST:event_butaoCadastrarActionPerformed
@@ -225,12 +235,13 @@ public class TelaCadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butaoCadastrar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel senhaCadastro;
     private javax.swing.JPasswordField senhaCasatro1;
     private javax.swing.JPanel tela1Cadastro;
     private javax.swing.JPanel tela2cadastro;
+    private javax.swing.JLabel usuarioCPF;
+    private javax.swing.JFormattedTextField usuarioCPFDdigitado;
     private javax.swing.JLabel usuarioCadastro;
     private javax.swing.JTextField usuariocadastro;
     // End of variables declaration//GEN-END:variables

@@ -81,7 +81,7 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="textoDataDevolucao" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -128,8 +128,8 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tituloTabelaSituacaoAlunoRE" pref="260" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+                                      <Component id="tituloTabelaSituacaoAlunoRE" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane1" pref="414" max="32767" attributes="0"/>
                                       <Component id="jScrollPane4" alignment="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -551,7 +551,7 @@
                       <Component id="iconeRE" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="tituloRegistrosEmprestimos" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="1497" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
